@@ -4,13 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="gaht.k1">Staywell Health, Prototype Preview, GAHT</title>
+<title data-i18n="medical-weight-loss.title">Staywell Health, Medical Weight Loss</title>
+<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <style>
+
 
   :root{
     --ivory:#faf7f1;--ivory-deep:#f2ede2;--olive:#3d4a3a;--olive-deep:#242e22;
@@ -144,6 +145,24 @@
     .gaht-two-col{grid-template-columns:1fr;}
   }
 
+
+  .wl-two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:900px;margin:0 auto;}
+  .wl-card{background:#fff;border:1px solid var(--line);padding:2.2rem 2rem;}
+  .wl-card.wl-highlight{border:1px solid var(--brass);}
+  .wl-card h3{font-size:1.35rem;margin-bottom:0.4rem;}
+  .wl-card ul{list-style:none;margin-bottom:1.4rem;}
+  .wl-card li{font-size:0.88rem;color:var(--ink-soft);padding-left:1.1rem;position:relative;margin-bottom:0.5rem;}
+  .wl-card li::before{content:'';position:absolute;left:0;top:0.5rem;width:5px;height:5px;background:var(--brass);border-radius:50%;}
+  .wl-pricing-table{max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);}
+  .wl-pricing-row{padding:1.8rem 2rem;border-top:1px solid var(--line);}
+  .wl-pricing-row:first-child{border-top:none;}
+  .wl-pricing-row h4{font-size:1.1rem;margin-bottom:0.5rem;color:var(--olive-deep);}
+  .wl-pricing-row p{color:var(--ink-soft);font-size:0.92rem;margin-bottom:0;}
+  .wl-pricing-row .wl-price{color:var(--brass);font-weight:700;}
+  @media(max-width:820px){
+    .wl-two-col{grid-template-columns:1fr;}
+  }
+
 </style>
 </head>
 <body>
@@ -152,91 +171,81 @@
 <a class="nav-mark" href="index.html"><img alt="Staywell Health" class="nav-logo-img" src="images/Logo.png"/></a>
 <button aria-label="Toggle menu" class="hamburger"><span></span><span></span><span></span></button>
 <ul class="nav-links">
-<li><a data-i18n="gaht.k3" href="staywell-about.html">About</a></li>
-<li><a data-i18n="gaht.k4" href="#" style="color:var(--brass);">Memberships</a></li>
+<li><a data-i18n="wl.k3" href="staywell-about.html">About</a></li>
+<li><a data-i18n="wl.k4" href="#" style="color:var(--brass);">Memberships</a></li>
 <li class="dropdown">
-<a class="dropbtn" data-i18n="gaht.k5" href="#">Resources ›</a>
+<a class="dropbtn" data-i18n="wl.k5" href="#">Resources ›</a>
 <div class="dropdown-content">
-<a data-i18n="gaht.k6" href="staywell-faq.html">FAQ</a>
-<a data-i18n="gaht.k7" href="blog.html">Blog</a>
-<a data-i18n="gaht.k8" href="staywell-contact.html">Contact</a>
-<a data-i18n="gaht.k9" href="staywell-healthshare.html">Healthshare Coverage</a>
+<a data-i18n="wl.k6" href="staywell-faq.html">FAQ</a>
+<a data-i18n="wl.k7" href="blog.html">Blog</a>
+<a data-i18n="wl.k8" href="staywell-contact.html">Contact</a>
+<a data-i18n="wl.k9" href="staywell-healthshare.html">Healthshare Coverage</a>
 </div>
 </li>
-<li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="gaht.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="gaht.k11">/</span><a data-i18n="gaht.k12" data-lang-option="es" href="#">ES</a></li>
-<li><a class="nav-cta" data-i18n="gaht.k13" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="gaht.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
+<li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="wl.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="wl.k11">/</span><a data-i18n="wl.k12" data-lang-option="es" href="#">ES</a></li>
+<li><a class="nav-cta" data-i18n="wl.k13" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="wl.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
 </ul>
 </div>
 </nav>
 <section class="page-hero">
 <div class="container">
-<div class="eyebrow" data-i18n="gaht.k14">Gender-Affirming Hormone Therapy</div>
-<h1 data-i18n="gaht.k15">Affirming care, on your terms</h1>
-<p data-i18n="gaht.k16">Safe, accessible hormone therapy management for adults 18 and older, on its own or folded into your primary care.</p>
+<div class="eyebrow" data-i18n="medical-weight-loss.div1">Medical Weight Loss</div>
+<h1 data-i18n="medical-weight-loss.h12">Clinician-guided, sustainable weight loss</h1>
+<p data-i18n="medical-weight-loss.p3">Individualized protocols built around your biology, not a one-size-fits-all program, with a provider who monitors and adjusts as your body responds.</p>
 <div class="hero-buttons">
-<a class="btn-brass" data-i18n="gaht.k17" href="#pricing">View Pricing</a>
-<a class="btn-outline-light" data-i18n="gaht.k18" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a>
+<a class="btn-brass" data-i18n="medical-weight-loss.a4" href="#pricing">View Pricing</a>
+<a class="btn-outline-light" data-i18n="medical-weight-loss.a5" href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank">Book a Consultation</a>
 </div>
 </div>
 </section>
 <section class="section" id="pricing">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="gaht.k19">Two Ways to Get Care</div>
-<h2 data-i18n="gaht.k20">Choose the path that fits</h2>
+<div class="eyebrow" data-i18n="medical-weight-loss.div6">Two Ways to Get Care</div>
+<h2 data-i18n="medical-weight-loss.h27">Choose the path that fits</h2>
 <div class="divider"></div>
-<p data-i18n="gaht.k21">Already have a primary care provider you want to keep? Enroll in the standalone GAHT Membership. Want Staywell Health to be your primary care provider too? GAHT is already included with Access, Complete, or Optimization.</p>
+<p data-i18n="medical-weight-loss.p8">Medical Weight Loss is available as a standalone service with no membership required, and it's also included as part of the Access, Complete, and Optimization memberships.</p>
 </div>
-<div class="gaht-two-col">
-<div class="gaht-card gaht-highlight">
-<h3 data-i18n="gaht.k22">Standalone GAHT Membership</h3>
-<div class="gaht-price">$49<span data-i18n="gaht.k23"> /mo</span></div>
-<p data-i18n="gaht.k24">Plus a one-time $50 enrollment fee. For adults who want focused GAHT management on its own, no primary care membership required.</p>
+<div class="wl-two-col">
+<div class="wl-card wl-highlight">
+<h3 data-i18n="medical-weight-loss.h39">Standalone Consultation</h3>
+<p data-i18n="medical-weight-loss.p10" style="color:var(--ink-soft);font-size:0.92rem;margin-bottom:1rem;">For patients who want medical weight loss on its own, no membership required.</p>
 <ul>
-<li data-i18n="gaht.k25">Quarterly telehealth check-ins</li>
-<li data-i18n="gaht.k26">Medication management</li>
-<li data-i18n="gaht.k27">Monitoring labs</li>
-<li data-i18n="gaht.k28">No commitment, cancel anytime</li>
+<li data-i18n="medical-weight-loss.li11">Individualized, clinician-guided protocol</li>
+<li data-i18n="medical-weight-loss.li12">Regular monitoring and dose adjustments</li>
+<li data-i18n="medical-weight-loss.li13">May include medications like semaglutide or tirzepatide</li>
 </ul>
-<a class="btn-brass" data-i18n="gaht.k29" href="https://staywellforlife.hint.com/signup/gaht" style="display:block;text-align:center;" target="_blank">Enroll in GAHT Membership</a>
+<a class="btn-brass" data-i18n="medical-weight-loss.a14" href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" style="display:block;text-align:center;" target="_blank">Schedule a Consultation</a>
 </div>
-<div class="gaht-card">
-<h3 data-i18n="gaht.k30">Included With a Membership</h3>
-<div class="gaht-price">$0<span data-i18n="gaht.k31"> extra</span></div>
-<p data-i18n="gaht.k32">If you're already, or become, an Access, Complete, or Optimization member, GAHT management is included at no additional program cost, no separate fee needed.</p>
+<div class="wl-card">
+<h3 data-i18n="medical-weight-loss.h315">Included With a Membership</h3>
+<p data-i18n="medical-weight-loss.p16" style="color:var(--ink-soft);font-size:0.92rem;margin-bottom:1rem;">Already a member, or planning to become one? Medical Weight Loss is included as part of Access, Complete, and Optimization.</p>
 <ul>
-<li data-i18n="gaht.k33">Everything in the standalone membership</li>
-<li data-i18n="gaht.k34">Plus full primary care</li>
-<li data-i18n="gaht.k35">One provider for everything</li>
+<li data-i18n="medical-weight-loss.li17">Same clinician-guided protocol</li>
+<li data-i18n="medical-weight-loss.li18">Plus full primary care with Access, Complete, or Optimization</li>
+<li data-i18n="medical-weight-loss.li19">One provider for everything</li>
 </ul>
-<a class="btn-outline-dark" data-i18n="gaht.k36" href="staywell-memberships.html" style="display:block;text-align:center;border:1px solid var(--olive-deep);color:var(--olive-deep);padding:0.85rem 1.8rem;font-weight:600;font-size:0.88rem;border-radius:2px;">Compare Memberships</a>
+<a class="btn-outline-dark" data-i18n="medical-weight-loss.a20" href="staywell-memberships.html" style="display:block;text-align:center;border:1px solid var(--olive-deep);color:var(--olive-deep);padding:0.85rem 1.8rem;font-weight:600;font-size:0.88rem;border-radius:2px;">Compare Memberships</a>
 </div>
 </div>
-<p data-i18n="gaht.k37" style="text-align:center;color:var(--ink-soft);font-size:0.85rem;margin-top:1.5rem;">Medication is billed separately from membership under either path, and your insurance can be used to cover it if you have coverage.</p>
 </div>
 </section>
 <section class="section section-deep">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="gaht.k38">What's Included</div>
-<h2 data-i18n="gaht.k39">Focused, high-quality care</h2>
+<div class="eyebrow" data-i18n="medical-weight-loss.div21">How Pricing Works</div>
+<h2 data-i18n="medical-weight-loss.h222">Cost depends on how you get your medication</h2>
 <div class="divider"></div>
+<p data-i18n="medical-weight-loss.p23">The consultation and prescription management fee depends on where your medication comes from.</p>
 </div>
-<div class="value-grid">
-<div class="value-card">
-<div class="value-mark"></div>
-<h4 data-i18n="gaht.k40">Quarterly Telehealth Check-Ins</h4>
-<p data-i18n="gaht.k41">Regular visits to review your progress, discuss your goals, and adjust your plan as needed.</p>
+<div class="wl-pricing-table">
+<div class="wl-pricing-row">
+<h4 data-i18n="medical-weight-loss.h424">Compounding Pharmacy</h4>
+<p data-i18n="medical-weight-loss.p25">If you're obtaining your medication through Staywell Health via a compounding pharmacy, <span class="wl-price" data-i18n="medical-weight-loss.span26">the consultation fee is included in the cost of the medication</span>. No separate consult charge.</p>
 </div>
-<div class="value-card">
-<div class="value-mark"></div>
-<h4 data-i18n="gaht.k42">Medication Management</h4>
-<p data-i18n="gaht.k43">Expert management of your hormone therapy, with prescriptions sent to your pharmacy of choice.</p>
-</div>
-<div class="value-card">
-<div class="value-mark"></div>
-<h4 data-i18n="gaht.k44">Monitoring Labs</h4>
-<p data-i18n="gaht.k45">Lab work to keep your treatment safe and on track throughout your care.</p>
+<div class="wl-pricing-row">
+<h4 data-i18n="medical-weight-loss.h427">Insurance, Commercially Available Product</h4>
+<p data-i18n="medical-weight-loss.p28">If you'll be using your insurance for a commercially available product at your own pharmacy, the weight loss consultation and prescription management fee is <span class="wl-price" data-i18n="medical-weight-loss.span29">$150 for the initial consult</span>. Quarterly follow-up appointments are required, at <span class="wl-price" data-i18n="medical-weight-loss.span30">$100 each</span> (virtual only).</p>
 </div>
 </div>
 </div>
@@ -244,38 +253,64 @@
 <section class="section">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="gaht.k46">Good to Know</div>
-<h2 data-i18n="gaht.k47">Eligibility and scope</h2>
+<div class="eyebrow" data-i18n="medical-weight-loss.div31">What's Included</div>
+<h2 data-i18n="medical-weight-loss.h232">Focused, individualized care</h2>
+<div class="divider"></div>
+</div>
+<div class="value-grid">
+<div class="value-card">
+<div class="value-mark"></div>
+<h4 data-i18n="medical-weight-loss.h433">Appetite Regulation</h4>
+<p data-i18n="medical-weight-loss.p34">Medications that help regulate appetite and reduce cravings as part of a broader plan.</p>
+</div>
+<div class="value-card">
+<div class="value-mark"></div>
+<h4 data-i18n="medical-weight-loss.h435">Blood Sugar Support</h4>
+<p data-i18n="medical-weight-loss.p36">Improved blood sugar control alongside your weight loss goals.</p>
+</div>
+<div class="value-card">
+<div class="value-mark"></div>
+<h4 data-i18n="medical-weight-loss.h437">Provider-Monitored Dosing</h4>
+<p data-i18n="medical-weight-loss.p38">Titrated dosing, monitored and adjusted by your provider as your body responds.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-deep">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow" data-i18n="medical-weight-loss.div39">Good to Know</div>
+<h2 data-i18n="medical-weight-loss.h240">Eligibility and scope</h2>
 <div class="divider"></div>
 </div>
 <div class="detail-list">
 <div class="detail-row">
-<div class="detail-label">Age Requirement</div>
-<div class="detail-value">GAHT membership is for adults 18 and older</div>
+<div class="detail-label" data-i18n="wl.x101">Scope of Care</div>
+<div class="detail-value" data-i18n="wl.x105">The standalone service does not include primary care</div>
 </div>
 <div class="detail-row">
-<div class="detail-label">Scope of Care</div>
-<div class="detail-value">The standalone membership does not include primary care services</div>
+<div class="detail-label" data-i18n="wl.x102">Medication Options</div>
+<div class="detail-value" data-i18n="wl.x106">Compounded medication through Staywell Health, or a commercially available product through your insurance and pharmacy</div>
 </div>
 <div class="detail-row">
-<div class="detail-label">Medication Billing</div>
-<div class="detail-value">Billed separately from membership; insurance can be used if you have coverage</div>
+<div class="detail-label" data-i18n="wl.x103">Follow-Up Visits</div>
+<div class="detail-value" data-i18n="wl.x107">Required quarterly if using insurance for a commercial product; virtual only</div>
 </div>
 <div class="detail-row">
-<div class="detail-label">Want Both?</div>
-<div class="detail-value">Enroll in Access, Complete, or Optimization instead, GAHT is included at no extra cost</div>
+<div class="detail-label" data-i18n="wl.x104">Want Primary Care Too?</div>
+<div class="detail-value" data-i18n="wl.x108">Add an Access, Complete, or Optimization membership alongside this service</div>
 </div>
 </div>
 </div>
 </section>
 <section class="section cta-final">
 <div class="container">
-<div class="eyebrow" data-i18n="gaht.k48">Ready to Get Started?</div>
-<h2 data-i18n="gaht.k49">Affirming, accessible hormone therapy</h2>
-<p data-i18n="gaht.k50">Book a free meet and greet, or enroll directly if you already know GAHT membership is right for you.</p>
+<div class="eyebrow" data-i18n="medical-weight-loss.div41">Ready to Get Started?</div>
+<h2 data-i18n="medical-weight-loss.h242">Sustainable, clinician-guided weight loss</h2>
+<p data-i18n="medical-weight-loss.p43">Schedule a consultation to see if medical weight loss is right for you, no membership required.</p>
 <div class="hero-buttons">
-<a class="btn-brass" data-i18n="gaht.k51" href="https://staywellforlife.hint.com/signup/gaht" target="_blank">Enroll in GAHT Membership</a>
-<a class="btn-outline-light" data-i18n="gaht.k52" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a>
+<a class="btn-brass" data-i18n="medical-weight-loss.a44" href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank">Schedule a Consultation</a>
+<a class="btn-outline-light" data-i18n="medical-weight-loss.a45" href="staywell-memberships.html">View Membership Plans</a>
 </div>
 </div>
 </section>
@@ -284,35 +319,35 @@
 <div class="footer-grid">
 <div>
 <img alt="Staywell Health" src="images/logo-white.png" style="height:88px;width:auto;margin-bottom:1rem;"/>
-<p data-i18n="gaht.k53" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
+<p data-i18n="wl.k53" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
 </div>
 <div>
 <h5>Explore</h5>
 <ul>
-<li><a data-i18n="gaht.k54" href="staywell-about.html">About</a></li>
-<li><a data-i18n="gaht.k55" href="staywell-memberships.html">Memberships</a></li>
-<li><a data-i18n="gaht.k56" href="staywell-faq.html">FAQ</a></li><li><a data-i18n="gaht.k57" href="staywell-contact.html">Contact</a></li></ul>
+<li><a data-i18n="wl.k54" href="staywell-about.html">About</a></li>
+<li><a data-i18n="wl.k55" href="staywell-memberships.html">Memberships</a></li>
+<li><a data-i18n="wl.k56" href="staywell-faq.html">FAQ</a></li><li><a data-i18n="wl.k57" href="staywell-contact.html">Contact</a></li></ul>
 </div>
 <div>
 <h5>Services</h5>
 <ul>
-<li><a data-i18n="gaht.k58" href="#">Functional Medicine</a></li>
-<li><a data-i18n="gaht.k59" href="staywell-dpc.html">Direct Primary Care</a></li>
-<li><a data-i18n="gaht.k60" href="staywell-hormone-optimization.html">Hormone Optimization</a></li>
-<li><a data-i18n="gaht.k61" href="staywell-peptide-therapy.html">Peptide Therapy</a></li>
-<li><a data-i18n="gaht.k62" href="staywell-longevity.html">Anti-Aging &amp; Longevity</a></li><li><a data-i18n="gaht.mwlfooter" href="staywell-medical-weight-loss.html">Medical Weight Loss</a></li><li><a data-i18n="gaht.aesfooter" href="staywell-aesthetics.html">Aesthetics</a></li>
+<li><a data-i18n="wl.k58" href="#">Functional Medicine</a></li>
+<li><a data-i18n="wl.k59" href="staywell-dpc.html">Direct Primary Care</a></li>
+<li><a data-i18n="wl.k60" href="staywell-hormone-optimization.html">Hormone Optimization</a></li>
+<li><a data-i18n="wl.k61" href="staywell-peptide-therapy.html">Peptide Therapy</a></li>
+<li><a data-i18n="wl.k62" href="staywell-longevity.html">Anti-Aging &amp; Longevity</a></li><li><a data-i18n="wl.mwlfooter" href="staywell-medical-weight-loss.html">Medical Weight Loss</a></li><li><a data-i18n="wl.aesfooter" href="staywell-aesthetics.html">Aesthetics</a></li>
 </ul>
 </div>
 <div>
 <h5>Resources</h5>
 <ul>
-<li><a data-i18n="gaht.k63" href="blog.html">Blog</a></li>
-<li><a data-i18n="gaht.k64" href="staywell-healthshare.html">Healthshare Coverage</a></li>
+<li><a data-i18n="wl.k63" href="blog.html">Blog</a></li>
+<li><a data-i18n="wl.k64" href="staywell-healthshare.html">Healthshare Coverage</a></li>
 </ul>
 </div>
 </div>
-<p data-i18n="gaht.k65" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming space for everyone, regardless of race, ethnicity, religion, age, disability, sexual orientation, gender identity, gender expression, or body size.</p>
-<div class="footer-bottom" data-i18n="gaht.k66">© 2026 Staywell Health, PLLC. All rights reserved.</div>
+<p data-i18n="wl.k65" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming space for everyone, regardless of race, ethnicity, religion, age, disability, sexual orientation, gender identity, gender expression, or body size.</p>
+<div class="footer-bottom" data-i18n="wl.k66">© 2026 Staywell Health, PLLC. All rights reserved.</div>
 </div>
 </footer>
 <script>

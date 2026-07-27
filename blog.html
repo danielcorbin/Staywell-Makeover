@@ -142,7 +142,12 @@
 
 
   .blog-list{max-width:820px;margin:0 auto;}
-  .blog-post{border-bottom:1px solid var(--line);padding:2.2rem 0;}
+  .blog-post{border-bottom:1px solid var(--line);padding:2.2rem 0;display:grid;grid-template-columns:200px 1fr;gap:1.8rem;align-items:start;}
+  .blog-post-thumb{width:200px;height:140px;object-fit:cover;border-radius:2px;}
+  @media(max-width:640px){
+    .blog-post{grid-template-columns:1fr;}
+    .blog-post-thumb{width:100%;height:auto;aspect-ratio:16/10;}
+  }
   .blog-post:first-child{padding-top:0;}
   .blog-post:last-child{border-bottom:none;}
   .blog-post-meta{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:0.6rem;}
@@ -174,7 +179,7 @@
 </div>
 </li>
 <li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="blog.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="blog.k11">/</span><a data-i18n="blog.k12" data-lang-option="es" href="#">ES</a></li>
-<li><a class="nav-cta" data-i18n="blog.k13" href="#">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="blog.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
+<li><a class="nav-cta" data-i18n="blog.k13" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="blog.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
 </ul>
 </div>
 </nav>
@@ -182,131 +187,191 @@
 <div class="container">
 <div class="eyebrow" data-i18n="blog.div2">Health Insights from Your Provider</div>
 <h1 data-i18n="blog.h13">The Staywell Blog</h1>
-<p data-i18n="blog.p4">Practical health guidance, DPC education, and wellness insights from Staywell Health in Raleigh, NC.</p>
+<p data-i18n="blog.p4">Straightforward looks at the health topics that affect you, myths worth busting, and honest takes on alternative treatments and what the science actually says.</p>
 </div>
 </section>
 <section class="section">
 <div class="container">
 <div class="blog-list">
 <div class="blog-post">
+<img alt="Perimenopause, Menopause, and Bioidentical HRT: What You Need to Know" class="blog-post-thumb" src="images/blog-womenshormones.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat1">Women’s Health<span data-i18n="blog.span5">July 15, 2026 · 10 min read</span></div>
 <h3 data-i18n="blog.h36"><a data-i18n="blog.a7" href="blog/womens-hormone-health.html">Perimenopause, Menopause, and Bioidentical HRT: What You Need to Know</a></h3>
 <p data-i18n="blog.p8">Perimenopause and menopause are not diseases to be endured. They are hormone deficiencies that can be treated safely and effectively with bioidentical HRT. Here's what's actually happening and what Staywell Health offers.</p>
 <a class="read-more" data-i18n="blog.a9" href="blog/womens-hormone-health.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Alzheimer’s Prevention and Brain Health: What You Can Do Starting Today" class="blog-post-thumb" src="images/blog-brainhealth.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat2">Brain Health<span data-i18n="blog.span10">July 1, 2026 · 10 min read</span></div>
 <h3 data-i18n="blog.h311"><a data-i18n="blog.a12" href="blog/alzheimers-brain-health.html">Alzheimer’s Prevention and Brain Health: What You Can Do Starting Today</a></h3>
 <p data-i18n="blog.p13">Alzheimer's isn't purely genetic. Learn what the research shows about diet, sleep, exercise, aluminum exposure, niacin, and the lifestyle changes that meaningfully reduce cognitive decline risk in Raleigh, NC.</p>
 <a class="read-more" data-i18n="blog.a14" href="blog/alzheimers-brain-health.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="3 Things Quietly Affecting Men’s Health After 40 (And What to Do About Them)" class="blog-post-thumb" src="images/blog-menshealth2.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat3">Men’s Health<span data-i18n="blog.span15">June 15, 2026 · 10 min read</span></div>
 <h3 data-i18n="blog.h316"><a data-i18n="blog.a17" href="blog/mens-health-hormone-optimization.html">3 Things Quietly Affecting Men’s Health After 40 (And What to Do About Them)</a></h3>
 <p data-i18n="blog.p18">Tired, gaining weight, low sex drive after 40? Low testosterone may be why. Learn about TRT, bioidentical hormones, hCG, and peptides for men at Staywell Health in Raleigh, NC.</p>
 <a class="read-more" data-i18n="blog.a19" href="blog/mens-health-hormone-optimization.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Pride Month and LGBTQ+ Health: Why Affirming Care Changes Everything" class="blog-post-thumb" src="images/blog-pride.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat4">LGBTQ+ Health<span data-i18n="blog.span20">June 1, 2026 · 9 min read</span></div>
 <h3 data-i18n="blog.h321"><a data-i18n="blog.a22" href="blog/lgbtq-affirming-care-pride.html">Pride Month and LGBTQ+ Health: Why Affirming Care Changes Everything</a></h3>
 <p data-i18n="blog.p23">LGBTQ+ patients have specific, well-documented health needs that require knowledgeable, affirming care. Staywell Health in Raleigh, NC provides LGBTQ+ primary care, gender-affirming hormone therapy, PrEP, and STI screening.</p>
 <a class="read-more" data-i18n="blog.a24" href="blog/lgbtq-affirming-care-pride.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Your Mental Health Is Your Physical Health" class="blog-post-thumb" src="images/blog-mentalhealth.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat5">Mental Health<span data-i18n="blog.span25">May 15, 2026 · 9 min read</span></div>
 <h3 data-i18n="blog.h326"><a data-i18n="blog.a27" href="blog/mental-health-body-connection.html">Your Mental Health Is Your Physical Health</a></h3>
 <p data-i18n="blog.p28">Anxiety, depression, and chronic stress have real physical consequences. Learn how the mind-body connection affects your heart, gut, hormones, and lifespan, and what integrative mental health care looks like in Raleigh, NC.</p>
 <a class="read-more" data-i18n="blog.a29" href="blog/mental-health-body-connection.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Lyme Disease in North Carolina: Symptoms, Prevention, and Treatment" class="blog-post-thumb" src="images/blog-lyme.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat6">Seasonal Health<span data-i18n="blog.span30">May 1, 2026 · 9 min read</span></div>
 <h3 data-i18n="blog.h331"><a data-i18n="blog.a32" href="blog/lyme-disease-awareness.html">Lyme Disease in North Carolina: Symptoms, Prevention, and Treatment</a></h3>
 <p data-i18n="blog.p33">Lyme disease is the most common tick-borne illness in the US and peak season in North Carolina is here. Here's how to prevent it, recognize it early, and what to do if you've been bitten.</p>
 <a class="read-more" data-i18n="blog.a34" href="blog/lyme-disease-awareness.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Allergies vs. Sinus Infection vs. COVID: How to Tell the Difference" class="blog-post-thumb" src="images/blog-allergies.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat7">Seasonal Health<span data-i18n="blog.span35">April 15, 2026 · 7 min read</span></div>
 <h3 data-i18n="blog.h336"><a data-i18n="blog.a37" href="blog/spring-allergies-vs-something-more.html">Allergies vs. Sinus Infection vs. COVID: How to Tell the Difference</a></h3>
 <p data-i18n="blog.p38">Spring allergies in Raleigh, NC are no joke. But is it really allergies, a sinus infection, or COVID? Here's how to tell the difference, natural treatment options, and when to see a provider.</p>
 <a class="read-more" data-i18n="blog.a39" href="blog/spring-allergies-vs-something-more.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="We Practice on Tuscarora Land. Here’s What That Means." class="blog-post-thumb" src="images/blog-tuscarora.jpeg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat8">Community<span data-i18n="blog.span40">April 1, 2026 · 9 min read</span></div>
 <h3 data-i18n="blog.h341"><a data-i18n="blog.a42" href="blog/tuscarora-land-acknowledgement.html">We Practice on Tuscarora Land. Here’s What That Means.</a></h3>
 <p data-i18n="blog.p43">Staywell Health sits on land that once belonged to the Tuscarora Nation. Here's who they are, what happened here, and why knowing this history matters for how we think about health and community.</p>
 <a class="read-more" data-i18n="blog.a44" href="blog/tuscarora-land-acknowledgement.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Colorectal Cancer: The Preventable Cancer We Don’t Talk About Enough" class="blog-post-thumb" src="images/blog-colorectal.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat9">Cancer Prevention<span data-i18n="blog.span45">March 15, 2026 · 8 min read</span></div>
 <h3 data-i18n="blog.h346"><a data-i18n="blog.a47" href="blog/colorectal-cancer-awareness.html">Colorectal Cancer: The Preventable Cancer We Don’t Talk About Enough</a></h3>
 <p data-i18n="blog.p48">Colorectal cancer is one of the most preventable cancers we have — and one of the most ignored. Here's what you need to know about symptoms, screening options, risk factors, and why this conversation can't wait.</p>
 <a class="read-more" data-i18n="blog.a49" href="blog/colorectal-cancer-awareness.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="What “Eating Healthy” Actually Means (And Why It’s Different for Everyone)" class="blog-post-thumb" src="images/blog-nutrition.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat10">Nutrition<span data-i18n="blog.span50">March 1, 2026 · 10 min read</span></div>
 <h3 data-i18n="blog.h351"><a data-i18n="blog.a52" href="blog/there-is-no-best-diet.html">What “Eating Healthy” Actually Means (And Why It’s Different for Everyone)</a></h3>
 <p data-i18n="blog.p53">Everyone's selling a different eating plan. Here's an honest breakdown of what 'eating healthy' actually means, why it looks different for everyone, and what the research actually says.</p>
 <a class="read-more" data-i18n="blog.a54" href="blog/there-is-no-best-diet.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Heart Disease in Women: Why It Looks Different and Gets Missed" class="blog-post-thumb" src="images/blog-hearthealth_women.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat11">Women's Health<span data-i18n="blog.span55">February 15, 2026 · 7 min read</span></div>
 <h3 data-i18n="blog.h356"><a data-i18n="blog.a57" href="blog/heart-disease-in-women.html">Heart Disease in Women: Why It Looks Different and Gets Missed</a></h3>
 <p data-i18n="blog.p58">Heart disease is the leading cause of death in women, but it often looks different than it does in men and gets missed because of it. Here's what to know, what to watch for, and what to actually test.</p>
 <a class="read-more" data-i18n="blog.a59" href="blog/heart-disease-in-women.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Black Health in America: The Disparities, the History, and the Path Forward" class="blog-post-thumb" src="images/blog-blackhealth.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat12">Health Equity<span data-i18n="blog.span60">February 1, 2026 · 9 min read</span></div>
 <h3 data-i18n="blog.h361"><a data-i18n="blog.a62" href="blog/black-health-in-america.html">Black Health in America: The Disparities, the History, and the Path Forward</a></h3>
 <p data-i18n="blog.p63">Black Americans face significant and well-documented health disparities across nearly every major category. This Black History Month, let's talk honestly about why, and what better care actually looks like.</p>
 <a class="read-more" data-i18n="blog.a64" href="blog/black-health-in-america.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Your Thyroid Might Be the Reason You Feel Off" class="blog-post-thumb" src="images/blog-thyroid.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat13">Thyroid Health<span data-i18n="blog.span65">January 15, 2026 · 7 min read</span></div>
 <h3 data-i18n="blog.h366"><a data-i18n="blog.a67" href="blog/your-thyroid-might-be-the-reason-you-feel-off.html">Your Thyroid Might Be the Reason You Feel Off</a></h3>
 <p data-i18n="blog.p68">Thyroid issues are incredibly common, frequently missed, and often dismissed. Here's what your thyroid actually does, what to look for, and what to ask your provider to test.</p>
 <a class="read-more" data-i18n="blog.a69" href="blog/your-thyroid-might-be-the-reason-you-feel-off.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="DPC vs. Traditional Insurance: A Real Cost Comparison for NC Residents" class="blog-post-thumb" src="images/blog-dpcvstraditional.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat14">Cost and Value<span data-i18n="blog.span70">January 1, 2026 · 6 min read</span></div>
 <h3 data-i18n="blog.h371"><a data-i18n="blog.a72" href="blog/dpc-vs-traditional-insurance-cost-comparison.html">DPC vs. Traditional Insurance: A Real Cost Comparison for NC Residents</a></h3>
 <p data-i18n="blog.p73">How does direct primary care actually compare to traditional health insurance in North Carolina? A real cost breakdown from a Raleigh DPC provider.</p>
 <a class="read-more" data-i18n="blog.a74" href="blog/dpc-vs-traditional-insurance-cost-comparison.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="What Is a Healthshare Plan and Is It Right for You?" class="blog-post-thumb" src="images/blog-healthshare.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat15">Health Coverage<span data-i18n="blog.span75">December 15, 2025 · 6 min read</span></div>
 <h3 data-i18n="blog.h376"><a data-i18n="blog.a77" href="blog/what-is-healthshare-and-is-it-right-for-you.html">What Is a Healthshare Plan and Is It Right for You?</a></h3>
 <p data-i18n="blog.p78">Healthshare plans are a popular alternative to traditional health insurance for self-employed individuals and families. Here's how they work and whether one might make sense for you.</p>
 <a class="read-more" data-i18n="blog.a79" href="blog/what-is-healthshare-and-is-it-right-for-you.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Spiritual Health and the Season of Light" class="blog-post-thumb" src="images/blog-spiritualhealth.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat16">Wellness<span data-i18n="blog.span80">December 1, 2025 · 8 min read</span></div>
 <h3 data-i18n="blog.h381"><a data-i18n="blog.a82" href="blog/spiritual-health-and-the-season-of-light.html">Spiritual Health and the Season of Light</a></h3>
 <p data-i18n="blog.p83">Spiritual health is one of the most overlooked pillars of overall wellbeing. This December, let's talk about what the season actually means, where our traditions come from, and why slowing down might be exactly what your body needs.</p>
 <a class="read-more" data-i18n="blog.a84" href="blog/spiritual-health-and-the-season-of-light.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Why Sleep Matters More Than You Think" class="blog-post-thumb" src="images/blog-sleep.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat17">Wellness<span data-i18n="blog.span85">November 15, 2025 · 6 min read</span></div>
 <h3 data-i18n="blog.h386"><a data-i18n="blog.a87" href="blog/why-sleep-matters-more-than-you-think.html">Why Sleep Matters More Than You Think</a></h3>
 <p data-i18n="blog.p88">Poor sleep affects your weight, your hormones, your mood, and your long-term health in ways most people don't realize. Here's what's actually going on and what you can do about it.</p>
 <a class="read-more" data-i18n="blog.a89" href="blog/why-sleep-matters-more-than-you-think.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Men's Health: What to Screen For and Why It Actually Matters" class="blog-post-thumb" src="images/blog-menshealth.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat18">Men's Health<span data-i18n="blog.span90">November 1, 2025 · 7 min read</span></div>
 <h3 data-i18n="blog.h391"><a data-i18n="blog.a92" href="blog/mens-health-awareness.html">Men's Health: What to Screen For and Why It Actually Matters</a></h3>
 <p data-i18n="blog.p93">Men are less likely to go to the doctor, more likely to ignore symptoms, and more likely to die from preventable conditions. Here's what to actually pay attention to and why DPC makes it easier.</p>
 <a class="read-more" data-i18n="blog.a94" href="blog/mens-health-awareness.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="What Is Direct Primary Care and Is It Right for You?" class="blog-post-thumb" src="images/blog-primarycare.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat19">Direct Primary Care<span data-i18n="blog.span95">October 15, 2025 · 5 min read</span></div>
 <h3 data-i18n="blog.h396"><a data-i18n="blog.a97" href="blog/what-is-direct-primary-care.html">What Is Direct Primary Care and Is It Right for You?</a></h3>
 <p data-i18n="blog.p98">What is direct primary care and how does it work? Learn how DPC gives you direct access to your provider for a flat monthly fee, with no insurance and no hassles.</p>
 <a class="read-more" data-i18n="blog.a99" href="blog/what-is-direct-primary-care.html">Read more →</a>
 </div>
+</div>
 <div class="blog-post">
+<img alt="Why I Started Staywell Health" class="blog-post-thumb" src="images/blog-whyistarted.jpg"/>
+<div class="blog-post-body">
 <div class="blog-post-meta" data-i18n="blog.cat20">Our Story<span data-i18n="blog.span100">October 1, 2025 · 4 min read</span></div>
 <h3 data-i18n="blog.h3101"><a data-i18n="blog.a102" href="blog/why-i-started-staywell-health.html">Why I Started Staywell Health</a></h3>
 <p data-i18n="blog.p103">After 8 years in traditional primary care, Daniel Corbin left to build something better. Here is the story behind Staywell Health and why it exists.</p>
 <a class="read-more" data-i18n="blog.a104" href="blog/why-i-started-staywell-health.html">Read more →</a>
+</div>
 </div>
 </div>
 </div>
@@ -317,7 +382,7 @@
 <h2 data-i18n="blog.h2106">Let's talk it through</h2>
 <p data-i18n="blog.p107">Book a free meet and greet to see if Staywell Health is right for you.</p>
 <div class="hero-buttons">
-<a class="btn-brass" data-i18n="blog.a108" href="#">Book Free Meet &amp; Greet</a>
+<a class="btn-brass" data-i18n="blog.a108" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a>
 <a class="btn-outline-light" data-i18n="blog.a109" href="staywell-memberships.html">View Membership Plans</a>
 </div>
 </div>
@@ -326,7 +391,7 @@
 <div class="container">
 <div class="footer-grid">
 <div>
-<img alt="Staywell Health" src="images/Logo.png" style="height:88px;width:auto;margin-bottom:1rem;"/>
+<img alt="Staywell Health" src="images/logo-white.png" style="height:88px;width:auto;margin-bottom:1rem;"/>
 <p data-i18n="blog.k82" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
 </div>
 <div>
@@ -343,7 +408,7 @@
 <li><a data-i18n="blog.k88" href="staywell-dpc.html">Direct Primary Care</a></li>
 <li><a data-i18n="blog.k89" href="staywell-hormone-optimization.html">Hormone Optimization</a></li>
 <li><a data-i18n="blog.k90" href="staywell-peptide-therapy.html">Peptide Therapy</a></li>
-<li><a data-i18n="blog.k91" href="staywell-longevity.html">Anti-Aging &amp; Longevity</a></li>
+<li><a data-i18n="blog.k91" href="staywell-longevity.html">Anti-Aging &amp; Longevity</a></li><li><a data-i18n="blog.mwlfooter" href="staywell-medical-weight-loss.html">Medical Weight Loss</a></li><li><a data-i18n="blog.aesfooter" href="staywell-aesthetics.html">Aesthetics</a></li>
 </ul>
 </div>
 <div>
@@ -354,7 +419,7 @@
 </ul>
 </div>
 </div>
-<p data-i18n="blog.k94" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming, and all-inclusive place for everyone, regardless of race, age, sexual orientation, gender identity, and more.</p>
+<p data-i18n="blog.k94" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming space for everyone, regardless of race, ethnicity, religion, age, disability, sexual orientation, gender identity, gender expression, or body size.</p>
 <div class="footer-bottom" data-i18n="blog.k95">© 2026 Staywell Health, PLLC. All rights reserved.</div>
 </div>
 </footer>

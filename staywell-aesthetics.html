@@ -4,13 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="gaht.k1">Staywell Health, Prototype Preview, GAHT</title>
+<title data-i18n="aesthetics.title">Staywell Health, Aesthetics</title>
+<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <style>
+
 
   :root{
     --ivory:#faf7f1;--ivory-deep:#f2ede2;--olive:#3d4a3a;--olive-deep:#242e22;
@@ -144,6 +145,19 @@
     .gaht-two-col{grid-template-columns:1fr;}
   }
 
+
+  .aes-two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:900px;margin:0 auto;}
+  .aes-card{background:#fff;border:1px solid var(--line);padding:2.2rem 2rem;}
+  .aes-card.aes-highlight{border:1px solid var(--brass);}
+  .aes-card h3{font-size:1.35rem;margin-bottom:0.4rem;}
+  .aes-card ul{list-style:none;margin-bottom:1.4rem;}
+  .aes-card li{font-size:0.88rem;color:var(--ink-soft);padding-left:1.1rem;position:relative;margin-bottom:0.5rem;}
+  .aes-card li::before{content:'';position:absolute;left:0;top:0.5rem;width:5px;height:5px;background:var(--brass);border-radius:50%;}
+  .aes-notice{max-width:820px;margin:2rem auto 0;background:var(--ivory-deep);border-left:3px solid var(--brass);padding:1.3rem 1.6rem;font-size:0.9rem;color:var(--ink);}
+  @media(max-width:820px){
+    .aes-two-col{grid-template-columns:1fr;}
+  }
+
 </style>
 </head>
 <body>
@@ -152,91 +166,89 @@
 <a class="nav-mark" href="index.html"><img alt="Staywell Health" class="nav-logo-img" src="images/Logo.png"/></a>
 <button aria-label="Toggle menu" class="hamburger"><span></span><span></span><span></span></button>
 <ul class="nav-links">
-<li><a data-i18n="gaht.k3" href="staywell-about.html">About</a></li>
-<li><a data-i18n="gaht.k4" href="#" style="color:var(--brass);">Memberships</a></li>
+<li><a data-i18n="aes.k3" href="staywell-about.html">About</a></li>
+<li><a data-i18n="aes.k4" href="#" style="color:var(--brass);">Memberships</a></li>
 <li class="dropdown">
-<a class="dropbtn" data-i18n="gaht.k5" href="#">Resources ›</a>
+<a class="dropbtn" data-i18n="aes.k5" href="#">Resources ›</a>
 <div class="dropdown-content">
-<a data-i18n="gaht.k6" href="staywell-faq.html">FAQ</a>
-<a data-i18n="gaht.k7" href="blog.html">Blog</a>
-<a data-i18n="gaht.k8" href="staywell-contact.html">Contact</a>
-<a data-i18n="gaht.k9" href="staywell-healthshare.html">Healthshare Coverage</a>
+<a data-i18n="aes.k6" href="staywell-faq.html">FAQ</a>
+<a data-i18n="aes.k7" href="blog.html">Blog</a>
+<a data-i18n="aes.k8" href="staywell-contact.html">Contact</a>
+<a data-i18n="aes.k9" href="staywell-healthshare.html">Healthshare Coverage</a>
 </div>
 </li>
-<li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="gaht.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="gaht.k11">/</span><a data-i18n="gaht.k12" data-lang-option="es" href="#">ES</a></li>
-<li><a class="nav-cta" data-i18n="gaht.k13" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="gaht.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
+<li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="aes.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="aes.k11">/</span><a data-i18n="aes.k12" data-lang-option="es" href="#">ES</a></li>
+<li><a class="nav-cta" data-i18n="aes.k13" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="aes.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
 </ul>
 </div>
 </nav>
 <section class="page-hero">
 <div class="container">
-<div class="eyebrow" data-i18n="gaht.k14">Gender-Affirming Hormone Therapy</div>
-<h1 data-i18n="gaht.k15">Affirming care, on your terms</h1>
-<p data-i18n="gaht.k16">Safe, accessible hormone therapy management for adults 18 and older, on its own or folded into your primary care.</p>
+<div class="eyebrow" data-i18n="aesthetics.div1">Aesthetics</div>
+<h1 data-i18n="aesthetics.h12">Refined, judgment-free aesthetic care</h1>
+<p data-i18n="aesthetics.p3">Xeomin treatment for smoothing fine lines and wrinkles, delivered by a provider who already knows your health history.</p>
 <div class="hero-buttons">
-<a class="btn-brass" data-i18n="gaht.k17" href="#pricing">View Pricing</a>
-<a class="btn-outline-light" data-i18n="gaht.k18" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a>
+<a class="btn-brass" data-i18n="aesthetics.a4" href="#pricing">Get Started</a>
+<a class="btn-outline-light" data-i18n="aesthetics.a5" href="https://staywellforlife.hint.com/booking?appointment-type=appty-e60aff0d125010c2" target="_blank">Book Xeomin Treatment</a>
 </div>
 </div>
 </section>
 <section class="section" id="pricing">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="gaht.k19">Two Ways to Get Care</div>
-<h2 data-i18n="gaht.k20">Choose the path that fits</h2>
+<div class="eyebrow" data-i18n="aesthetics.div6">Two Ways to Get Care</div>
+<h2 data-i18n="aesthetics.h27">Choose the path that fits</h2>
 <div class="divider"></div>
-<p data-i18n="gaht.k21">Already have a primary care provider you want to keep? Enroll in the standalone GAHT Membership. Want Staywell Health to be your primary care provider too? GAHT is already included with Access, Complete, or Optimization.</p>
+<p data-i18n="aesthetics.p8">Aesthetics is available as a standalone service with no membership required, and it's also included as part of the Access and Complete memberships.</p>
 </div>
-<div class="gaht-two-col">
-<div class="gaht-card gaht-highlight">
-<h3 data-i18n="gaht.k22">Standalone GAHT Membership</h3>
-<div class="gaht-price">$49<span data-i18n="gaht.k23"> /mo</span></div>
-<p data-i18n="gaht.k24">Plus a one-time $50 enrollment fee. For adults who want focused GAHT management on its own, no primary care membership required.</p>
+<div class="aes-two-col">
+<div class="aes-card aes-highlight">
+<h3 data-i18n="aesthetics.h39">Standalone Treatment</h3>
+<p data-i18n="aesthetics.p10" style="color:var(--ink-soft);font-size:0.92rem;margin-bottom:1rem;">For patients who want a Xeomin treatment on its own, no membership required.</p>
 <ul>
-<li data-i18n="gaht.k25">Quarterly telehealth check-ins</li>
-<li data-i18n="gaht.k26">Medication management</li>
-<li data-i18n="gaht.k27">Monitoring labs</li>
-<li data-i18n="gaht.k28">No commitment, cancel anytime</li>
+<li data-i18n="aesthetics.li11">Xeomin, an FDA-approved alternative to Botox</li>
+<li data-i18n="aesthetics.li12">Smooths fine lines and wrinkles</li>
+<li data-i18n="aesthetics.li13">Delivered by a provider who knows your full health picture</li>
 </ul>
-<a class="btn-brass" data-i18n="gaht.k29" href="https://staywellforlife.hint.com/signup/gaht" style="display:block;text-align:center;" target="_blank">Enroll in GAHT Membership</a>
+<a class="btn-brass" data-i18n="aesthetics.a14" href="https://staywellforlife.hint.com/booking?appointment-type=appty-e60aff0d125010c2" style="display:block;text-align:center;" target="_blank">Book Xeomin Treatment</a>
 </div>
-<div class="gaht-card">
-<h3 data-i18n="gaht.k30">Included With a Membership</h3>
-<div class="gaht-price">$0<span data-i18n="gaht.k31"> extra</span></div>
-<p data-i18n="gaht.k32">If you're already, or become, an Access, Complete, or Optimization member, GAHT management is included at no additional program cost, no separate fee needed.</p>
+<div class="aes-card">
+<h3 data-i18n="aesthetics.h315">Included With a Membership</h3>
+<p data-i18n="aesthetics.p16" style="color:var(--ink-soft);font-size:0.92rem;margin-bottom:1rem;">Already a member, or planning to become one? Aesthetics is included as part of Access and Complete.</p>
 <ul>
-<li data-i18n="gaht.k33">Everything in the standalone membership</li>
-<li data-i18n="gaht.k34">Plus full primary care</li>
-<li data-i18n="gaht.k35">One provider for everything</li>
+<li data-i18n="aesthetics.li17">Same Xeomin treatment</li>
+<li data-i18n="aesthetics.li18">Plus full primary care with Access or Complete</li>
+<li data-i18n="aesthetics.li19">One provider for everything</li>
 </ul>
-<a class="btn-outline-dark" data-i18n="gaht.k36" href="staywell-memberships.html" style="display:block;text-align:center;border:1px solid var(--olive-deep);color:var(--olive-deep);padding:0.85rem 1.8rem;font-weight:600;font-size:0.88rem;border-radius:2px;">Compare Memberships</a>
+<a class="btn-outline-dark" data-i18n="aesthetics.a20" href="staywell-memberships.html" style="display:block;text-align:center;border:1px solid var(--olive-deep);color:var(--olive-deep);padding:0.85rem 1.8rem;font-weight:600;font-size:0.88rem;border-radius:2px;">Compare Memberships</a>
 </div>
 </div>
-<p data-i18n="gaht.k37" style="text-align:center;color:var(--ink-soft);font-size:0.85rem;margin-top:1.5rem;">Medication is billed separately from membership under either path, and your insurance can be used to cover it if you have coverage.</p>
+<div class="aes-notice" data-i18n="aesthetics.notice1"><strong>Booking note:</strong> Standalone Xeomin appointments require 72 business hours notice to schedule.</div>
 </div>
 </section>
 <section class="section section-deep">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="gaht.k38">What's Included</div>
-<h2 data-i18n="gaht.k39">Focused, high-quality care</h2>
+<div class="eyebrow" data-i18n="aesthetics.div21">What We Offer</div>
+<h2 data-i18n="aesthetics.h222">Xeomin treatment</h2>
 <div class="divider"></div>
+<p data-i18n="aesthetics.p23">We currently offer Xeomin, an FDA-approved alternative to Botox, for smoothing fine lines and wrinkles.</p>
 </div>
 <div class="value-grid">
 <div class="value-card">
 <div class="value-mark"></div>
-<h4 data-i18n="gaht.k40">Quarterly Telehealth Check-Ins</h4>
-<p data-i18n="gaht.k41">Regular visits to review your progress, discuss your goals, and adjust your plan as needed.</p>
+<h4 data-i18n="aesthetics.h424">FDA-Approved</h4>
+<p data-i18n="aesthetics.p25">Xeomin is an FDA-approved neuromodulator, a trusted alternative to Botox.</p>
 </div>
 <div class="value-card">
 <div class="value-mark"></div>
-<h4 data-i18n="gaht.k42">Medication Management</h4>
-<p data-i18n="gaht.k43">Expert management of your hormone therapy, with prescriptions sent to your pharmacy of choice.</p>
+<h4 data-i18n="aesthetics.h426">Smooths Fine Lines</h4>
+<p data-i18n="aesthetics.p27">Targets fine lines and wrinkles for a refreshed, natural look.</p>
 </div>
 <div class="value-card">
 <div class="value-mark"></div>
-<h4 data-i18n="gaht.k44">Monitoring Labs</h4>
-<p data-i18n="gaht.k45">Lab work to keep your treatment safe and on track throughout your care.</p>
+<h4 data-i18n="aesthetics.h428">Provider-Delivered</h4>
+<p data-i18n="aesthetics.p29">Delivered by a provider who already knows your health history, not a stranger.</p>
 </div>
 </div>
 </div>
@@ -244,38 +256,34 @@
 <section class="section">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="gaht.k46">Good to Know</div>
-<h2 data-i18n="gaht.k47">Eligibility and scope</h2>
+<div class="eyebrow" data-i18n="aesthetics.div30">Good to Know</div>
+<h2 data-i18n="aesthetics.h231">Eligibility and scope</h2>
 <div class="divider"></div>
 </div>
 <div class="detail-list">
 <div class="detail-row">
-<div class="detail-label">Age Requirement</div>
-<div class="detail-value">GAHT membership is for adults 18 and older</div>
+<div class="detail-label" data-i18n="aes.x101">Scope of Care</div>
+<div class="detail-value" data-i18n="aes.x104">The standalone service does not include primary care</div>
 </div>
 <div class="detail-row">
-<div class="detail-label">Scope of Care</div>
-<div class="detail-value">The standalone membership does not include primary care services</div>
+<div class="detail-label" data-i18n="aes.x102">Booking Notice</div>
+<div class="detail-value" data-i18n="aes.x105">Standalone Xeomin appointments require 72 business hours notice</div>
 </div>
 <div class="detail-row">
-<div class="detail-label">Medication Billing</div>
-<div class="detail-value">Billed separately from membership; insurance can be used if you have coverage</div>
-</div>
-<div class="detail-row">
-<div class="detail-label">Want Both?</div>
-<div class="detail-value">Enroll in Access, Complete, or Optimization instead, GAHT is included at no extra cost</div>
+<div class="detail-label" data-i18n="aes.x103">Want Primary Care Too?</div>
+<div class="detail-value" data-i18n="aes.x106">Add an Access or Complete membership alongside this service</div>
 </div>
 </div>
 </div>
 </section>
 <section class="section cta-final">
 <div class="container">
-<div class="eyebrow" data-i18n="gaht.k48">Ready to Get Started?</div>
-<h2 data-i18n="gaht.k49">Affirming, accessible hormone therapy</h2>
-<p data-i18n="gaht.k50">Book a free meet and greet, or enroll directly if you already know GAHT membership is right for you.</p>
+<div class="eyebrow" data-i18n="aesthetics.div32">Ready to Get Started?</div>
+<h2 data-i18n="aesthetics.h233">Refined care, on your terms</h2>
+<p data-i18n="aesthetics.p34">Book a Xeomin treatment, no membership required, or compare memberships if you'd like primary care too.</p>
 <div class="hero-buttons">
-<a class="btn-brass" data-i18n="gaht.k51" href="https://staywellforlife.hint.com/signup/gaht" target="_blank">Enroll in GAHT Membership</a>
-<a class="btn-outline-light" data-i18n="gaht.k52" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet &amp; Greet</a>
+<a class="btn-brass" data-i18n="aesthetics.a35" href="https://staywellforlife.hint.com/booking?appointment-type=appty-e60aff0d125010c2" target="_blank">Book Xeomin Treatment</a>
+<a class="btn-outline-light" data-i18n="aesthetics.a36" href="staywell-memberships.html">View Membership Plans</a>
 </div>
 </div>
 </section>
@@ -284,35 +292,35 @@
 <div class="footer-grid">
 <div>
 <img alt="Staywell Health" src="images/logo-white.png" style="height:88px;width:auto;margin-bottom:1rem;"/>
-<p data-i18n="gaht.k53" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
+<p data-i18n="aes.k53" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
 </div>
 <div>
 <h5>Explore</h5>
 <ul>
-<li><a data-i18n="gaht.k54" href="staywell-about.html">About</a></li>
-<li><a data-i18n="gaht.k55" href="staywell-memberships.html">Memberships</a></li>
-<li><a data-i18n="gaht.k56" href="staywell-faq.html">FAQ</a></li><li><a data-i18n="gaht.k57" href="staywell-contact.html">Contact</a></li></ul>
+<li><a data-i18n="aes.k54" href="staywell-about.html">About</a></li>
+<li><a data-i18n="aes.k55" href="staywell-memberships.html">Memberships</a></li>
+<li><a data-i18n="aes.k56" href="staywell-faq.html">FAQ</a></li><li><a data-i18n="aes.k57" href="staywell-contact.html">Contact</a></li></ul>
 </div>
 <div>
 <h5>Services</h5>
 <ul>
-<li><a data-i18n="gaht.k58" href="#">Functional Medicine</a></li>
-<li><a data-i18n="gaht.k59" href="staywell-dpc.html">Direct Primary Care</a></li>
-<li><a data-i18n="gaht.k60" href="staywell-hormone-optimization.html">Hormone Optimization</a></li>
-<li><a data-i18n="gaht.k61" href="staywell-peptide-therapy.html">Peptide Therapy</a></li>
-<li><a data-i18n="gaht.k62" href="staywell-longevity.html">Anti-Aging &amp; Longevity</a></li><li><a data-i18n="gaht.mwlfooter" href="staywell-medical-weight-loss.html">Medical Weight Loss</a></li><li><a data-i18n="gaht.aesfooter" href="staywell-aesthetics.html">Aesthetics</a></li>
+<li><a data-i18n="aes.k58" href="#">Functional Medicine</a></li>
+<li><a data-i18n="aes.k59" href="staywell-dpc.html">Direct Primary Care</a></li>
+<li><a data-i18n="aes.k60" href="staywell-hormone-optimization.html">Hormone Optimization</a></li>
+<li><a data-i18n="aes.k61" href="staywell-peptide-therapy.html">Peptide Therapy</a></li>
+<li><a data-i18n="aes.k62" href="staywell-longevity.html">Anti-Aging &amp; Longevity</a></li><li><a data-i18n="aes.mwlfooter" href="staywell-medical-weight-loss.html">Medical Weight Loss</a></li><li><a data-i18n="aes.aesfooter" href="staywell-aesthetics.html">Aesthetics</a></li>
 </ul>
 </div>
 <div>
 <h5>Resources</h5>
 <ul>
-<li><a data-i18n="gaht.k63" href="blog.html">Blog</a></li>
-<li><a data-i18n="gaht.k64" href="staywell-healthshare.html">Healthshare Coverage</a></li>
+<li><a data-i18n="aes.k63" href="blog.html">Blog</a></li>
+<li><a data-i18n="aes.k64" href="staywell-healthshare.html">Healthshare Coverage</a></li>
 </ul>
 </div>
 </div>
-<p data-i18n="gaht.k65" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming space for everyone, regardless of race, ethnicity, religion, age, disability, sexual orientation, gender identity, gender expression, or body size.</p>
-<div class="footer-bottom" data-i18n="gaht.k66">© 2026 Staywell Health, PLLC. All rights reserved.</div>
+<p data-i18n="aes.k65" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming space for everyone, regardless of race, ethnicity, religion, age, disability, sexual orientation, gender identity, gender expression, or body size.</p>
+<div class="footer-bottom" data-i18n="aes.k66">© 2026 Staywell Health, PLLC. All rights reserved.</div>
 </div>
 </footer>
 <script>
