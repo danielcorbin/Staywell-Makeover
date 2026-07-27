@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>What Is a Healthshare Plan and Is It Right for You? | Staywell Health, Prototype Preview</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<style>
+
+
+
+  :root{
+    --ivory:#faf7f1;--ivory-deep:#f2ede2;--olive:#3d4a3a;--olive-deep:#242e22;
+    --sage:#7a8a7a;--sage-deep:#5f6f5c;--brass:#b8935f;--brass-light:#d8bd8f;
+    --ink:#2a2e28;--ink-soft:#5c6259;--line:#e2dccd;--flag:#b34a3c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);letter-spacing:0.01em;}
+  .container{max-width:1000px;margin:0 auto;padding:0 2rem;}
+  a{text-decoration:none;}
+  .flag-banner{background:#fbe9e6;color:var(--flag);text-align:center;font-size:0.8rem;padding:0.6rem 1rem;border-bottom:1px solid #f0c9c2;}
+  .eyebrow{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:1rem;}
+
+  nav{background:var(--ivory);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;position:relative;}
+  .nav-inner{max-width:1100px;margin:0 auto;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+  .nav-mark{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--olive-deep);}
+  .nav-logo-img{height:88px;width:auto;display:block;}
+  .nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
+  .nav-links a{color:var(--ink-soft);font-size:0.92rem;font-weight:500;}
+  .nav-links a:hover{color:var(--brass);}
+  .nav-cta{border:1px solid var(--olive-deep);padding:0.55rem 1.4rem;border-radius:2px;color:var(--olive-deep) !important;font-size:0.85rem !important;}
+  .nav-cta:hover{background:var(--olive-deep);color:var(--ivory) !important;}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
+  .hamburger span{width:24px;height:2px;background:var(--olive-deep);display:block;}
+  .dropdown{position:relative;}
+  .dropdown-content{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);min-width:230px;box-shadow:0 10px 20px rgba(0,0,0,0.08);z-index:60;flex-direction:column;padding:0.5rem 0;}
+  .dropdown-content a{padding:0.65rem 1.3rem;color:var(--ink-soft);font-size:0.88rem;display:block;font-weight:500;}
+  .dropdown-content a:hover{background:var(--ivory-deep);color:var(--brass);}
+  .dropdown:hover .dropdown-content{display:flex;}
+  @media(max-width:820px){
+    .hamburger{display:flex;}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);flex-direction:column;align-items:flex-start;padding:1.2rem 2rem;gap:1rem;border-bottom:1px solid var(--line);box-shadow:0 8px 16px rgba(0,0,0,0.06);}
+    .nav-links.active{display:flex;}
+    .dropdown-content{position:static;display:flex !important;flex-direction:column;box-shadow:none;border:none;background:none;padding:0.4rem 0 0.4rem 1rem;min-width:0;}
+    .dropdown-content a{padding:0.4rem 0;}
+  }
+
+  .page-hero{
+    padding:5rem 0 4rem;
+    background:linear-gradient(115deg, rgba(36,46,34,0.88), rgba(36,46,34,0.68));
+    background-size:cover;background-position:center;color:var(--ivory);text-align:center;
+  }
+  .page-hero .eyebrow{color:var(--brass-light);}
+  .page-hero h1{font-size:2.8rem;margin-bottom:1rem;color:#fff;}
+  .page-hero p{max-width:38rem;margin:0 auto;color:#e4e2d8;font-weight:300;font-size:1.05rem;}
+  .section-olive{background:var(--olive-deep);color:var(--ivory);}
+  .section-olive h2,.section-olive h4{color:#fff;}
+  .section-olive .eyebrow{color:var(--brass-light);}
+
+  .section{padding:4rem 0;}
+  .section-deep{background:var(--ivory-deep);}
+  .section-head{max-width:680px;margin:0 auto 2.5rem;text-align:center;}
+  .section-head h2{font-size:2rem;}
+  .section-head p{color:var(--ink-soft);margin-top:0.8rem;}
+  .divider{width:48px;height:1px;background:var(--brass);margin:1rem auto 0;}
+
+  /* Base tier table */
+  .tier-table{max-width:800px;margin:0 auto;background:#fff;border:1px solid var(--line);}
+  .tier-row{display:flex;border-top:1px solid var(--line);padding:1.3rem 1.8rem;align-items:center;}
+  .tier-row:first-child{border-top:none;background:var(--ivory-deep);font-weight:600;}
+  .tier-name{flex:2;font-size:0.95rem;}
+  .tier-price{flex:1;text-align:right;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--olive-deep);}
+
+  /* Optimization tiers callout */
+  .opt-tiers{max-width:800px;margin:2.5rem auto 0;background:#fff;border:1px solid var(--brass);padding:2rem 2.2rem;}
+  .opt-tiers h4{font-size:1.3rem;margin-bottom:0.8rem;}
+  .opt-tier-row{display:flex;justify-content:space-between;padding:0.9rem 0;border-top:1px solid var(--line);align-items:center;}
+  .opt-tier-row:first-of-type{border-top:none;}
+  .flag-value{color:var(--flag);font-weight:600;font-size:0.85rem;}
+
+  /* Discount grid */
+  .discount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:800px;margin:0 auto;}
+  .discount-card{background:#fff;padding:2rem 1.5rem;text-align:center;}
+  .discount-pct{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--brass);margin-bottom:0.4rem;}
+  .discount-label{font-size:0.9rem;color:var(--ink-soft);}
+
+  /* Fee / discount detail list */
+  .detail-list{max-width:800px;margin:0 auto;background:#fff;border:1px solid var(--line);}
+  .detail-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:1.4rem 1.8rem;border-top:1px solid var(--line);}
+  .detail-row:first-child{border-top:none;}
+  .detail-label{flex:1.4;font-weight:600;font-size:0.94rem;}
+  .detail-value{flex:1;text-align:right;color:var(--ink-soft);font-size:0.92rem;}
+
+  .cta-final{text-align:center;background:var(--olive-deep);color:var(--ivory);}
+  .cta-final .eyebrow{color:var(--brass-light);}
+  .cta-final h2{color:#fff;}
+  .cta-final p{color:#d9d6c8;max-width:34rem;margin:1rem auto 2rem;}
+  .btn-brass{background:var(--brass);color:var(--olive-deep);padding:0.85rem 1.8rem;font-weight:600;font-size:0.88rem;border-radius:2px;display:inline-block;}
+  .btn-brass:hover{background:var(--brass-light);}
+  .btn-outline-light{border:1px solid rgba(255,255,255,0.5);color:#fff;padding:0.9rem 2rem;font-weight:500;font-size:0.9rem;border-radius:2px;display:inline-block;}
+  .btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+  .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+
+  footer{background:var(--olive-deep);color:#c9c6ba;padding:3rem 0 2rem;font-size:0.85rem;text-align:center;}
+  footer a{color:#c9c6ba;}
+  footer a:hover{color:#fff;}
+  .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:1.6rem;margin-bottom:2.5rem;text-align:left;}
+  footer h5{color:var(--brass-light);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;font-family:'Inter',sans-serif;font-weight:600;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:0.55rem;font-size:0.88rem;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:1.5rem;text-align:center;font-size:0.78rem;color:#8a8a7c;}
+  @media(max-width:480px){
+    .footer-grid{grid-template-columns:1fr;text-align:center;}
+  }
+
+  @media(max-width:820px){
+    .tier-row,.detail-row,.opt-tier-row{flex-direction:column;align-items:flex-start;gap:0.3rem;}
+    .tier-price,.detail-value{text-align:left;}
+    .discount-grid{grid-template-columns:1fr;}
+    .page-hero h1{font-size:2rem;}
+  }
+
+  .faq-intro{max-width:680px;margin:0 auto 2.5rem;text-align:center;color:var(--ink-soft);}
+  .faq-cat{max-width:820px;margin:0 auto 3rem;}
+  .faq-cat h3{font-size:1.5rem;margin-bottom:1.5rem;color:var(--olive-deep);border-bottom:2px solid var(--brass);padding-bottom:0.6rem;}
+  .faq-item{background:#fff;border:1px solid var(--line);margin-bottom:0.8rem;border-radius:2px;}
+  .faq-item summary{padding:1.2rem 1.5rem;cursor:pointer;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink);gap:1rem;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';font-size:1.4rem;color:var(--brass);font-weight:400;flex-shrink:0;line-height:1;}
+  .faq-item[open] summary::after{content:'\2212';}
+  .faq-item[open] summary{border-bottom:1px solid var(--line);}
+  .faq-answer{padding:0 1.5rem 1.3rem;color:var(--ink-soft);font-size:0.94rem;}
+  .faq-answer p{margin-bottom:0.8rem;}
+  .faq-answer p:last-child{margin-bottom:0;}
+  .faq-answer strong{color:var(--ink);}
+  .faq-answer a{color:var(--brass);text-decoration:underline;}
+
+
+  .blog-list{max-width:820px;margin:0 auto;}
+  .blog-post{border-bottom:1px solid var(--line);padding:2.2rem 0;}
+  .blog-post:first-child{padding-top:0;}
+  .blog-post:last-child{border-bottom:none;}
+  .blog-post-meta{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:0.6rem;}
+  .blog-post-meta span{color:#a9a695;text-transform:none;letter-spacing:normal;font-weight:400;margin-left:0.7rem;}
+  .blog-post h3{font-size:1.4rem;margin-bottom:0.6rem;line-height:1.3;}
+  .blog-post p{color:var(--ink-soft);font-size:0.94rem;margin-bottom:0.9rem;}
+  .blog-post a.read-more{color:var(--brass);font-weight:600;font-size:0.88rem;}
+  .blog-post a.read-more:hover{color:var(--olive-deep);}
+
+
+
+  .post-eyebrow{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass-light);font-weight:600;margin-bottom:1rem;}
+  .post-hero-title{font-size:2.6rem;color:#fff;margin-bottom:1rem;max-width:44rem;margin-left:auto;margin-right:auto;}
+  .post-hero-meta{color:#e4e2d8;font-size:0.9rem;font-weight:300;}
+  .post-hero-meta span{margin:0 0.5rem;}
+  .post-hero-img{max-width:900px;margin:-3rem auto 0;padding:0 2rem;position:relative;z-index:2;}
+  .post-hero-img img{width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+  .post-body-wrap{max-width:720px;margin:0 auto;padding:4rem 2rem 2rem;}
+  .post-body-wrap h2{font-size:1.7rem;margin-top:2.6rem;margin-bottom:1rem;color:var(--ink);}
+  .post-body-wrap h3{font-size:1.3rem;margin-top:2.2rem;margin-bottom:0.8rem;color:var(--ink);}
+  .post-body-wrap p{font-size:1.03rem;line-height:1.8;color:var(--ink-soft);margin-bottom:1.3rem;}
+  .post-body-wrap ul,.post-body-wrap ol{margin:0 0 1.5rem 1.5rem;}
+  .post-body-wrap li{font-size:1.03rem;line-height:1.8;color:var(--ink-soft);margin-bottom:0.5rem;}
+  .post-body-wrap strong{color:var(--ink);}
+  .post-body-wrap table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:0.94rem;}
+  .post-body-wrap th{background:var(--ivory-deep);text-align:left;padding:0.7rem 1rem;font-weight:600;color:var(--ink);border-bottom:2px solid var(--brass);}
+  .post-body-wrap td{padding:0.7rem 1rem;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+  .post-callout{background:var(--ivory-deep);border-left:3px solid var(--brass);padding:1.4rem 1.6rem;margin:2rem 0;}
+  .post-callout p{margin-bottom:0 !important;font-style:italic;color:var(--ink) !important;}
+  .post-divider{border:none;border-top:1px solid var(--line);margin:2.5rem 0;}
+  .post-author-box{display:flex;gap:1.2rem;align-items:flex-start;background:var(--ivory-deep);padding:1.6rem;border-radius:2px;}
+  .post-author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .post-author-box h4{font-size:1.05rem;margin-bottom:0.4rem;}
+  .post-author-box p{font-size:0.9rem;color:var(--ink-soft);margin-bottom:0 !important;}
+  .post-back-link{display:inline-block;color:var(--brass-light);font-size:0.88rem;margin-bottom:1.3rem;}
+  .post-back-link:hover{color:#fff;}
+  @media(max-width:820px){
+    .post-hero-title{font-size:1.9rem;}
+    .post-author-box{flex-direction:column;align-items:center;text-align:center;}
+  }
+
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-mark" href="../index.html"><img alt="Staywell Health" class="nav-logo-img" src="../images/Logo.png"/></a>
+<button aria-label="Toggle menu" class="hamburger"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a data-i18n="blog.k3" href="../staywell-about.html">About</a></li>
+<li><a data-i18n="blog.k4" href="../staywell-memberships.html">Memberships</a></li>
+<li class="dropdown">
+<a class="dropbtn" data-i18n="blog.k5" href="#">Resources ›</a>
+<div class="dropdown-content">
+<a data-i18n="blog.k6" href="#">FAQ</a>
+<a data-i18n="blog.k7" href="#">Blog</a>
+<a data-i18n="blog.k8" href="../staywell-contact.html">Contact</a>
+<a data-i18n="blog.k9" href="../staywell-healthshare.html">Healthshare Coverage</a>
+</div>
+</li>
+<li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="blog.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="blog.k11">/</span><a data-i18n="blog.k12" data-lang-option="es" href="#">ES</a></li>
+<li><a class="nav-cta" data-i18n="blog.k13" href="#">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="blog.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
+</ul>
+</div>
+</nav>
+<section class="page-hero" style="padding-bottom:2.5rem;">
+<div class="container">
+<a class="post-back-link" href="../blog.html">&larr; Back to Blog</a>
+<div class="post-eyebrow">Health Coverage</div>
+<h1 class="post-hero-title">What Is a Healthshare Plan and Is It Right for You?</h1>
+<div class="post-hero-meta"><span>By Daniel Corbin, DNP, APRN, FNP-C</span>&middot;<span>December 15, 2025</span>&middot;<span>6 min read</span></div>
+</div>
+</section>
+<div class="post-hero-img"><img src="../images/blog-healthshare.jpg" alt="What Is a Healthshare Plan and Is It Right for You?"/></div>
+<section class="section">
+<div class="container">
+<div class="post-body-wrap">
+<p>If you have been looking for alternatives to traditional health insurance, you have probably come across the term "healthshare." Maybe it sounded interesting, maybe it sounded too good to be true, or maybe you just had no idea what it was. Any of those reactions is totally fair. So let me just explain it clearly.</p>
+<p>This is actually something I talk about with patients pretty regularly, because a lot of the people who come to Staywell are self-employed, uninsured, or dealing with premiums that just do not make financial sense anymore. And for a lot of those folks, a healthshare plan paired with a DPC membership turns out to be a really solid combination.</p>
+<h2>What Is a Healthshare Plan?</h2>
+<p>A healthshare plan, also called a health sharing membership, is not insurance. It is a community-based model where members contribute a monthly amount that goes toward sharing each other's eligible medical costs. When you have a qualifying medical need, the community helps cover it.</p>
+<p>The concept has been around for decades, and it has grown a lot in popularity as traditional insurance premiums have climbed. There are a number of plans out there, and they vary quite a bit in terms of what they cover, how they work, and who they are designed for.</p>
+<div class="post-callout">
+<p>Important: Healthshare plans are not insurance and do not fulfill an insurance requirement. They work differently from insurance in meaningful ways, which I will cover below. Make sure you understand how a plan works before enrolling.</p>
+</div>
+<h2>How Is It Different from Health Insurance?</h2>
+<p>This is the part that trips people up, so it is worth being clear about. With traditional insurance, you pay premiums and the insurance company is legally obligated to pay covered claims according to your plan. With a healthshare, you are joining a community of members who voluntarily agree to help share each other's costs. There is no legal guarantee of payment in the same way.</p>
+<p>That said, established healthshare organizations have strong track records of sharing costs for their members, and many people find them to be a reliable, more affordable alternative. The key is doing your homework and understanding exactly what is and is not eligible for sharing under any plan you consider.</p>
+<p>One term you will see come up with healthshare plans is IUA, which stands for Initial Unshared Amount. Think of it like a deductible, but per incident rather than per calendar year. It is the amount you pay out of pocket before the community starts sharing the remaining costs for a given medical event. You choose your IUA when you enroll. A lower IUA means sharing kicks in sooner but your monthly contribution is higher. A higher IUA means a lower monthly cost but more out of pocket if something comes up. Keep that in mind as you look at the comparison below.</p>
+<table class="cost-table">
+<tr>
+<th>Feature</th>
+<th>Traditional Insurance</th>
+<th>Healthshare Plan</th>
+</tr>
+<tr>
+<td>Monthly cost</td>
+<td>Often $400-$700+ per month (individual)</td>
+<td>&lt;$100 - $300/mo (individual, varies by age and IUA)</td>
+</tr>
+<tr>
+<td>Legal payment guarantee</td>
+<td>Yes, for covered services</td>
+<td>No, based on community guidelines</td>
+</tr>
+<tr>
+<td>Network restrictions</td>
+<td>Often yes</td>
+<td>Often no</td>
+</tr>
+<tr>
+<td>Religious requirements</td>
+<td>No</td>
+<td>Varies by plan</td>
+</tr>
+<tr>
+<td>Enrollment periods</td>
+<td>Usually yes</td>
+<td>Often open enrollment year-round</td>
+</tr>
+<tr>
+<td>Pre-existing conditions</td>
+<td>Must be covered under ACA plans</td>
+<td>Varies by plan, often limited initially</td>
+</tr>
+</table>
+<h2>Who Is a Good Fit for a Healthshare Plan?</h2>
+<p>Healthshare plans tend to work really well for people who are generally healthy, do not have a lot of ongoing complex medical needs, and are primarily looking for coverage against major, unexpected medical events like hospitalizations, surgeries, or ER visits. They are especially popular among self-employed individuals and freelancers who are buying coverage on their own and feel the full weight of marketplace premiums.</p>
+<p>They can also be a great fit for people who are currently uninsured and want some form of major medical protection without paying full marketplace rates, and for current Staywell members who want to pair their DPC membership with something that covers the bigger stuff.</p>
+<p>Where healthshare plans are generally not a great fit is for people who have significant ongoing health conditions that require expensive specialist care, complex medications, or frequent hospitalizations. In those situations, traditional insurance with its legal protections and ACA coverage requirements is usually the better call.</p>
+<h2>Zion HealthShare: The Plan I Partner With</h2>
+<p>There are several healthshare options out there, and I think it is worth knowing that they are not all the same. After looking at what was available, I chose to partner with Zion HealthShare because of how they operate. They are a nonprofit organization, they have no religious requirements to join, there are no network restrictions, and there is no enrollment period so you can join any time of year. They are transparent about how sharing works and what is eligible.</p>
+<p>Zion HealthShare is built around the idea that people should be able to help each other with medical costs in a straightforward, community-driven way, without a lot of red tape or restrictions around who qualifies. That philosophy lines up pretty well with why I started Staywell in the first place.</p>
+<p>I have a full page on my site that walks through Zion HealthShare's plans, what they cover, and how to enroll if you want to explore it. You can check that out at <a href="../staywell-healthshare.html" style="color: #059669;">our Healthshare Coverage page</a>.</p>
+<h2>What Does Zion HealthShare Cost?</h2>
+<p>For an individual, Zion HealthShare membership currently ranges from $84 to $298 per month depending on your age and the IUA you select. Compare that to what you would pay for a marketplace plan in NC, and the difference is pretty striking.</p>
+<table class="cost-table">
+<tr>
+<th>Coverage Option</th>
+<th>Estimated Monthly Cost (Individual)</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>NC Marketplace Bronze Plan (age 40)</td>
+<td>~$515/mo</td>
+<td>High deductible, limited primary care coverage</td>
+</tr>
+<tr>
+<td>NC Marketplace Silver Plan (age 40)</td>
+<td>~$495/mo</td>
+<td>More coverage, still significant out-of-pocket costs</td>
+</tr>
+<tr>
+<td>Zion HealthShare (individual)</td>
+<td>$84 - $298/mo</td>
+<td>Varies by age and IUA selection; no network restrictions</td>
+</tr>
+<tr>
+<td>Zion HealthShare + Staywell DPC</td>
+<td>$84 - $298/mo + $89/mo</td>
+<td>Full primary care covered, major medical sharing in place</td>
+</tr>
+</table>
+<p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;">Marketplace estimates are approximate and vary by age, location, and plan. Zion HealthShare pricing is current as of the writing of this post and is subject to change. Visit <a href="../staywell-healthshare.html" style="color: #059669;">our Zion HealthShare page</a> for current pricing and plan details.</p>
+<h2>How DPC and Healthshare Work Together</h2>
+<p>This combination is honestly one of the things I am most excited to talk to patients about, because it can make real financial sense for a lot of people.</p>
+<p>Here is the basic idea: your Staywell DPC membership covers your primary care layer completely. Visits, labs, messaging, same-day access, annual wellness. No copays, no claims, no hassle. A healthshare plan then sits on top of that to handle the things that are outside of primary care, things like hospitalizations, surgeries, specialist referrals, and imaging.</p>
+<p>When your primary care is already handled through your DPC membership, you are not relying on your healthshare for the everyday stuff. That means fewer submissions, less friction, and you are using the healthshare for what it is actually designed for: the big, unexpected stuff.</p>
+<div class="post-callout">
+<p>A lot of people are surprised to learn how much of their healthcare actually happens at the primary care level. When that piece is covered and accessible, the major medical coverage you need on top of it can be much more straightforward and affordable.</p>
+</div>
+<h2>What to Think About Before You Decide</h2>
+<p>I want to be real with you: a healthshare plan is not the right move for everyone, and I would rather help you make the right decision than just push one option. Here are a few things worth thinking through before you go this route.</p>
+<p>First, read the guidelines carefully. Every healthshare has what they call sharing guidelines, which spell out what is and is not eligible for sharing. Pre-existing conditions, certain medications, and some types of care may not be shareable, at least not right away. Know what you are getting into.</p>
+<p>Second, think about your health situation honestly. If you have ongoing complex needs that require frequent specialist care or expensive medications, make sure the plan you are considering will actually cover what you need before you drop your current coverage.</p>
+<p>Third, consider pairing it with DPC. If you are going the healthshare route, having a DPC membership means your primary care is already handled. That is a big piece of the puzzle taken care of before your healthshare ever comes into play.</p>
+<p>If you want to talk through whether this setup makes sense for your specific situation, that is exactly the kind of conversation I love having. Book a free meet and greet and we can figure it out together.</p>
+<div class="disclaimer-box">
+                    Zion HealthShare is not an insurance company. Neither this publication nor membership in Zion HealthShare are offered by an insurance company. Visit zionhealthshare.org to view your state-specific notice.
+                </div>
+<div class="post-author-box">
+<img alt="Daniel Corbin, DNP, APRN, FNP-C" src="../images/provider-photo.jpg"/>
+<div>
+<h4>Daniel Corbin, DNP, APRN, FNP-C</h4>
+<p>Board-certified Family Nurse Practitioner and founder of Staywell Health, a direct primary care practice in Raleigh, NC specializing in whole-person care, LGBTQ+ health, and lifestyle medicine.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section cta-final">
+<div class="container">
+<h2>Ready to experience care like this?</h2>
+<p>Book a free 15-minute virtual meet and greet to see if Staywell Health is right for you.</p>
+<div class="hero-buttons">
+<a class="btn-brass" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet & Greet</a>
+<a class="btn-outline-light" href="../staywell-memberships.html">Learn About Zion HealthShare</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<img alt="Staywell Health" src="../images/Logo.png" style="height:88px;width:auto;margin-bottom:1rem;"/>
+<p data-i18n="blog.k82" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
+</div>
+<div>
+<h5>Explore</h5>
+<ul>
+<li><a data-i18n="blog.k83" href="../staywell-about.html">About</a></li>
+<li><a data-i18n="blog.k84" href="../staywell-memberships.html">Memberships</a></li>
+<li><a data-i18n="blog.k85" href="#">FAQ</a></li><li><a data-i18n="blog.k86" href="../staywell-contact.html">Contact</a></li></ul>
+</div>
+<div>
+<h5>Services</h5>
+<ul>
+<li><a data-i18n="blog.k87" href="#">Functional Medicine</a></li>
+<li><a data-i18n="blog.k88" href="../staywell-dpc.html">Direct Primary Care</a></li>
+<li><a data-i18n="blog.k89" href="../staywell-hormone-optimization.html">Hormone Optimization</a></li>
+<li><a data-i18n="blog.k90" href="../staywell-peptide-therapy.html">Peptide Therapy</a></li>
+<li><a data-i18n="blog.k91" href="../staywell-longevity.html">Anti-Aging &amp; Longevity</a></li>
+</ul>
+</div>
+<div>
+<h5>Resources</h5>
+<ul>
+<li><a data-i18n="blog.k92" href="#">Blog</a></li>
+<li><a data-i18n="blog.k93" href="../staywell-healthshare.html">Healthshare Coverage</a></li>
+</ul>
+</div>
+</div>
+<p data-i18n="blog.k94" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming, and all-inclusive place for everyone, regardless of race, age, sexual orientation, gender identity, and more.</p>
+<div class="footer-bottom" data-i18n="blog.k95">© 2026 Staywell Health, PLLC. All rights reserved.</div>
+</div>
+</footer>
+<script>
+document.querySelectorAll('.hamburger').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var nav = btn.closest('nav');
+    var links = nav.querySelector('.nav-links');
+    links.classList.toggle('active');
+  });
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click', function(){
+    a.closest('.nav-links').classList.remove('active');
+  });
+});
+</script>
+<script src="../i18n.js"></script>
+</body>
+</html>

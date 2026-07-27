@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Thyroid Might Be the Reason You Feel Off | Staywell Health, Prototype Preview</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<style>
+
+
+
+  :root{
+    --ivory:#faf7f1;--ivory-deep:#f2ede2;--olive:#3d4a3a;--olive-deep:#242e22;
+    --sage:#7a8a7a;--sage-deep:#5f6f5c;--brass:#b8935f;--brass-light:#d8bd8f;
+    --ink:#2a2e28;--ink-soft:#5c6259;--line:#e2dccd;--flag:#b34a3c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);letter-spacing:0.01em;}
+  .container{max-width:1000px;margin:0 auto;padding:0 2rem;}
+  a{text-decoration:none;}
+  .flag-banner{background:#fbe9e6;color:var(--flag);text-align:center;font-size:0.8rem;padding:0.6rem 1rem;border-bottom:1px solid #f0c9c2;}
+  .eyebrow{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:1rem;}
+
+  nav{background:var(--ivory);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;position:relative;}
+  .nav-inner{max-width:1100px;margin:0 auto;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+  .nav-mark{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--olive-deep);}
+  .nav-logo-img{height:88px;width:auto;display:block;}
+  .nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
+  .nav-links a{color:var(--ink-soft);font-size:0.92rem;font-weight:500;}
+  .nav-links a:hover{color:var(--brass);}
+  .nav-cta{border:1px solid var(--olive-deep);padding:0.55rem 1.4rem;border-radius:2px;color:var(--olive-deep) !important;font-size:0.85rem !important;}
+  .nav-cta:hover{background:var(--olive-deep);color:var(--ivory) !important;}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
+  .hamburger span{width:24px;height:2px;background:var(--olive-deep);display:block;}
+  .dropdown{position:relative;}
+  .dropdown-content{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);min-width:230px;box-shadow:0 10px 20px rgba(0,0,0,0.08);z-index:60;flex-direction:column;padding:0.5rem 0;}
+  .dropdown-content a{padding:0.65rem 1.3rem;color:var(--ink-soft);font-size:0.88rem;display:block;font-weight:500;}
+  .dropdown-content a:hover{background:var(--ivory-deep);color:var(--brass);}
+  .dropdown:hover .dropdown-content{display:flex;}
+  @media(max-width:820px){
+    .hamburger{display:flex;}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);flex-direction:column;align-items:flex-start;padding:1.2rem 2rem;gap:1rem;border-bottom:1px solid var(--line);box-shadow:0 8px 16px rgba(0,0,0,0.06);}
+    .nav-links.active{display:flex;}
+    .dropdown-content{position:static;display:flex !important;flex-direction:column;box-shadow:none;border:none;background:none;padding:0.4rem 0 0.4rem 1rem;min-width:0;}
+    .dropdown-content a{padding:0.4rem 0;}
+  }
+
+  .page-hero{
+    padding:5rem 0 4rem;
+    background:linear-gradient(115deg, rgba(36,46,34,0.88), rgba(36,46,34,0.68));
+    background-size:cover;background-position:center;color:var(--ivory);text-align:center;
+  }
+  .page-hero .eyebrow{color:var(--brass-light);}
+  .page-hero h1{font-size:2.8rem;margin-bottom:1rem;color:#fff;}
+  .page-hero p{max-width:38rem;margin:0 auto;color:#e4e2d8;font-weight:300;font-size:1.05rem;}
+  .section-olive{background:var(--olive-deep);color:var(--ivory);}
+  .section-olive h2,.section-olive h4{color:#fff;}
+  .section-olive .eyebrow{color:var(--brass-light);}
+
+  .section{padding:4rem 0;}
+  .section-deep{background:var(--ivory-deep);}
+  .section-head{max-width:680px;margin:0 auto 2.5rem;text-align:center;}
+  .section-head h2{font-size:2rem;}
+  .section-head p{color:var(--ink-soft);margin-top:0.8rem;}
+  .divider{width:48px;height:1px;background:var(--brass);margin:1rem auto 0;}
+
+  /* Base tier table */
+  .tier-table{max-width:800px;margin:0 auto;background:#fff;border:1px solid var(--line);}
+  .tier-row{display:flex;border-top:1px solid var(--line);padding:1.3rem 1.8rem;align-items:center;}
+  .tier-row:first-child{border-top:none;background:var(--ivory-deep);font-weight:600;}
+  .tier-name{flex:2;font-size:0.95rem;}
+  .tier-price{flex:1;text-align:right;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--olive-deep);}
+
+  /* Optimization tiers callout */
+  .opt-tiers{max-width:800px;margin:2.5rem auto 0;background:#fff;border:1px solid var(--brass);padding:2rem 2.2rem;}
+  .opt-tiers h4{font-size:1.3rem;margin-bottom:0.8rem;}
+  .opt-tier-row{display:flex;justify-content:space-between;padding:0.9rem 0;border-top:1px solid var(--line);align-items:center;}
+  .opt-tier-row:first-of-type{border-top:none;}
+  .flag-value{color:var(--flag);font-weight:600;font-size:0.85rem;}
+
+  /* Discount grid */
+  .discount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:800px;margin:0 auto;}
+  .discount-card{background:#fff;padding:2rem 1.5rem;text-align:center;}
+  .discount-pct{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--brass);margin-bottom:0.4rem;}
+  .discount-label{font-size:0.9rem;color:var(--ink-soft);}
+
+  /* Fee / discount detail list */
+  .detail-list{max-width:800px;margin:0 auto;background:#fff;border:1px solid var(--line);}
+  .detail-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:1.4rem 1.8rem;border-top:1px solid var(--line);}
+  .detail-row:first-child{border-top:none;}
+  .detail-label{flex:1.4;font-weight:600;font-size:0.94rem;}
+  .detail-value{flex:1;text-align:right;color:var(--ink-soft);font-size:0.92rem;}
+
+  .cta-final{text-align:center;background:var(--olive-deep);color:var(--ivory);}
+  .cta-final .eyebrow{color:var(--brass-light);}
+  .cta-final h2{color:#fff;}
+  .cta-final p{color:#d9d6c8;max-width:34rem;margin:1rem auto 2rem;}
+  .btn-brass{background:var(--brass);color:var(--olive-deep);padding:0.85rem 1.8rem;font-weight:600;font-size:0.88rem;border-radius:2px;display:inline-block;}
+  .btn-brass:hover{background:var(--brass-light);}
+  .btn-outline-light{border:1px solid rgba(255,255,255,0.5);color:#fff;padding:0.9rem 2rem;font-weight:500;font-size:0.9rem;border-radius:2px;display:inline-block;}
+  .btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+  .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+
+  footer{background:var(--olive-deep);color:#c9c6ba;padding:3rem 0 2rem;font-size:0.85rem;text-align:center;}
+  footer a{color:#c9c6ba;}
+  footer a:hover{color:#fff;}
+  .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:1.6rem;margin-bottom:2.5rem;text-align:left;}
+  footer h5{color:var(--brass-light);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;font-family:'Inter',sans-serif;font-weight:600;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:0.55rem;font-size:0.88rem;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:1.5rem;text-align:center;font-size:0.78rem;color:#8a8a7c;}
+  @media(max-width:480px){
+    .footer-grid{grid-template-columns:1fr;text-align:center;}
+  }
+
+  @media(max-width:820px){
+    .tier-row,.detail-row,.opt-tier-row{flex-direction:column;align-items:flex-start;gap:0.3rem;}
+    .tier-price,.detail-value{text-align:left;}
+    .discount-grid{grid-template-columns:1fr;}
+    .page-hero h1{font-size:2rem;}
+  }
+
+  .faq-intro{max-width:680px;margin:0 auto 2.5rem;text-align:center;color:var(--ink-soft);}
+  .faq-cat{max-width:820px;margin:0 auto 3rem;}
+  .faq-cat h3{font-size:1.5rem;margin-bottom:1.5rem;color:var(--olive-deep);border-bottom:2px solid var(--brass);padding-bottom:0.6rem;}
+  .faq-item{background:#fff;border:1px solid var(--line);margin-bottom:0.8rem;border-radius:2px;}
+  .faq-item summary{padding:1.2rem 1.5rem;cursor:pointer;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink);gap:1rem;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';font-size:1.4rem;color:var(--brass);font-weight:400;flex-shrink:0;line-height:1;}
+  .faq-item[open] summary::after{content:'\2212';}
+  .faq-item[open] summary{border-bottom:1px solid var(--line);}
+  .faq-answer{padding:0 1.5rem 1.3rem;color:var(--ink-soft);font-size:0.94rem;}
+  .faq-answer p{margin-bottom:0.8rem;}
+  .faq-answer p:last-child{margin-bottom:0;}
+  .faq-answer strong{color:var(--ink);}
+  .faq-answer a{color:var(--brass);text-decoration:underline;}
+
+
+  .blog-list{max-width:820px;margin:0 auto;}
+  .blog-post{border-bottom:1px solid var(--line);padding:2.2rem 0;}
+  .blog-post:first-child{padding-top:0;}
+  .blog-post:last-child{border-bottom:none;}
+  .blog-post-meta{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:0.6rem;}
+  .blog-post-meta span{color:#a9a695;text-transform:none;letter-spacing:normal;font-weight:400;margin-left:0.7rem;}
+  .blog-post h3{font-size:1.4rem;margin-bottom:0.6rem;line-height:1.3;}
+  .blog-post p{color:var(--ink-soft);font-size:0.94rem;margin-bottom:0.9rem;}
+  .blog-post a.read-more{color:var(--brass);font-weight:600;font-size:0.88rem;}
+  .blog-post a.read-more:hover{color:var(--olive-deep);}
+
+
+
+  .post-eyebrow{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass-light);font-weight:600;margin-bottom:1rem;}
+  .post-hero-title{font-size:2.6rem;color:#fff;margin-bottom:1rem;max-width:44rem;margin-left:auto;margin-right:auto;}
+  .post-hero-meta{color:#e4e2d8;font-size:0.9rem;font-weight:300;}
+  .post-hero-meta span{margin:0 0.5rem;}
+  .post-hero-img{max-width:900px;margin:-3rem auto 0;padding:0 2rem;position:relative;z-index:2;}
+  .post-hero-img img{width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+  .post-body-wrap{max-width:720px;margin:0 auto;padding:4rem 2rem 2rem;}
+  .post-body-wrap h2{font-size:1.7rem;margin-top:2.6rem;margin-bottom:1rem;color:var(--ink);}
+  .post-body-wrap h3{font-size:1.3rem;margin-top:2.2rem;margin-bottom:0.8rem;color:var(--ink);}
+  .post-body-wrap p{font-size:1.03rem;line-height:1.8;color:var(--ink-soft);margin-bottom:1.3rem;}
+  .post-body-wrap ul,.post-body-wrap ol{margin:0 0 1.5rem 1.5rem;}
+  .post-body-wrap li{font-size:1.03rem;line-height:1.8;color:var(--ink-soft);margin-bottom:0.5rem;}
+  .post-body-wrap strong{color:var(--ink);}
+  .post-body-wrap table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:0.94rem;}
+  .post-body-wrap th{background:var(--ivory-deep);text-align:left;padding:0.7rem 1rem;font-weight:600;color:var(--ink);border-bottom:2px solid var(--brass);}
+  .post-body-wrap td{padding:0.7rem 1rem;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+  .post-callout{background:var(--ivory-deep);border-left:3px solid var(--brass);padding:1.4rem 1.6rem;margin:2rem 0;}
+  .post-callout p{margin-bottom:0 !important;font-style:italic;color:var(--ink) !important;}
+  .post-divider{border:none;border-top:1px solid var(--line);margin:2.5rem 0;}
+  .post-author-box{display:flex;gap:1.2rem;align-items:flex-start;background:var(--ivory-deep);padding:1.6rem;border-radius:2px;}
+  .post-author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .post-author-box h4{font-size:1.05rem;margin-bottom:0.4rem;}
+  .post-author-box p{font-size:0.9rem;color:var(--ink-soft);margin-bottom:0 !important;}
+  .post-back-link{display:inline-block;color:var(--brass-light);font-size:0.88rem;margin-bottom:1.3rem;}
+  .post-back-link:hover{color:#fff;}
+  @media(max-width:820px){
+    .post-hero-title{font-size:1.9rem;}
+    .post-author-box{flex-direction:column;align-items:center;text-align:center;}
+  }
+
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-mark" href="../index.html"><img alt="Staywell Health" class="nav-logo-img" src="../images/Logo.png"/></a>
+<button aria-label="Toggle menu" class="hamburger"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a data-i18n="blog.k3" href="../staywell-about.html">About</a></li>
+<li><a data-i18n="blog.k4" href="../staywell-memberships.html">Memberships</a></li>
+<li class="dropdown">
+<a class="dropbtn" data-i18n="blog.k5" href="#">Resources ›</a>
+<div class="dropdown-content">
+<a data-i18n="blog.k6" href="#">FAQ</a>
+<a data-i18n="blog.k7" href="#">Blog</a>
+<a data-i18n="blog.k8" href="../staywell-contact.html">Contact</a>
+<a data-i18n="blog.k9" href="../staywell-healthshare.html">Healthshare Coverage</a>
+</div>
+</li>
+<li class="lang-toggle" data-lang-toggle=""><a class="lang-active" data-i18n="blog.k10" data-lang-option="en" href="#">EN</a><span class="lang-sep" data-i18n="blog.k11">/</span><a data-i18n="blog.k12" data-lang-option="es" href="#">ES</a></li>
+<li><a class="nav-cta" data-i18n="blog.k13" href="#">Book Free Meet &amp; Greet</a></li><li><a class="nav-cta" data-i18n="blog.navportal" href="https://staywellforlife.hint.com/login/request" target="_blank">Portal</a></li>
+</ul>
+</div>
+</nav>
+<section class="page-hero" style="padding-bottom:2.5rem;">
+<div class="container">
+<a class="post-back-link" href="../blog.html">&larr; Back to Blog</a>
+<div class="post-eyebrow">Thyroid Health</div>
+<h1 class="post-hero-title">Your Thyroid Might Be the Reason You Feel Off</h1>
+<div class="post-hero-meta"><span>By Daniel Corbin, DNP, APRN, FNP-C</span>&middot;<span>January 15, 2026</span>&middot;<span>7 min read</span></div>
+</div>
+</section>
+<div class="post-hero-img"><img src="../images/blog-thyroid.jpg" alt="Your Thyroid Might Be the Reason You Feel Off"/></div>
+<section class="section">
+<div class="container">
+<div class="post-body-wrap">
+<p>January is Thyroid Awareness Month, and I want to use it to talk about something I see in practice all the time: people who have been feeling off for months or even years, sometimes their whole adult lives, and nobody has ever taken a close enough look at their thyroid.</p>
+<p>Fatigue that sleep doesn't fix. Weight that won't budge no matter what you do. A kind of low-grade fog that makes it hard to think clearly. Feeling cold when everyone else is fine. Mood that's harder to manage than it used to be. Any of those sound familiar? Thyroid dysfunction is one of the most common and most underdiagnosed conditions I encounter, and it's worth understanding what's actually going on.</p>
+<h2>What Your Thyroid Actually Does</h2>
+<p>Your thyroid is a small butterfly-shaped gland at the base of your neck, and it is essentially the master regulator of your metabolism. It produces hormones, mainly T4 and T3, that affect nearly every cell in your body. We're talking heart rate, body temperature, energy production, digestion, mood, brain function, weight regulation, and more. When the thyroid is working well you don't notice it at all. When it's not, you feel it everywhere, often in ways that are easy to chalk up to stress, aging, or just being tired.</p>
+<h2>Hypothyroidism: When the Thyroid Is Underactive</h2>
+<p>Hypothyroidism, where the thyroid produces too little hormone, is by far the more common of the two main thyroid conditions. It affects an estimated 20 million Americans, and women are significantly more likely to have it than men. Classic symptoms include fatigue, weight gain, cold intolerance, constipation, dry skin and hair, brain fog, depression, slow heart rate, and heavy or irregular periods.</p>
+<p>The tricky thing is that these symptoms are vague and overlap with a lot of other conditions. They also tend to come on gradually, which means people often normalize them over time. "I'm just tired" or "I've always had a slow metabolism" are things I hear a lot from people who turn out to have a thyroid problem that was hiding in plain sight.</p>
+<h2>Hashimoto's: The Most Common Cause of Hypothyroidism</h2>
+<p>Hashimoto's thyroiditis is an autoimmune condition where the immune system mistakenly attacks the thyroid gland over time, gradually impairing its ability to produce hormone. It's the most common cause of hypothyroidism in the US, and it often goes undetected for years because standard thyroid testing doesn't always include the antibody markers that would identify it.</p>
+<p>Why does this matter? Because Hashimoto's is autoimmune, meaning the root issue is immune dysregulation, not just low thyroid output. Managing it well often involves looking at the bigger picture: inflammation, gut health, nutrient levels, stress, and other autoimmune triggers, not just replacing the missing hormone. People with Hashimoto's also have an increased risk of developing other autoimmune conditions, so it's worth knowing about.</p>
+<p>If you've been diagnosed with hypothyroidism but never had your thyroid antibodies checked, it's worth asking about. The two main ones to test are TPO antibodies and thyroglobulin antibodies.</p>
+<h2>Thyroid and Your Weight</h2>
+<p>This is one of the most frustrating parts of thyroid dysfunction for a lot of people. When the thyroid is underactive, your metabolism actually slows down. You're not imagining it. The body becomes less efficient at burning calories, more prone to retaining fluid, and more resistant to fat loss even with diet and exercise changes.</p>
+<p>What makes this even more complicated is that even when thyroid levels are treated and fall within the normal lab range, some people still struggle with their weight because the reference ranges used in standard lab interpretation are pretty broad. What's "normal" for the population isn't always optimal for an individual. This is something I think about when reviewing thyroid labs with patients, because a TSH of 3.5 might technically be in range but still be associated with symptoms in someone who feels best at 1.5.</p>
+<h2>Thyroid and Mental Health</h2>
+<p>The connection between thyroid function and mental health is real and often underappreciated. Hypothyroidism is strongly associated with depression, anxiety, cognitive slowing, and poor memory. In fact, thyroid dysfunction can mimic depression so closely that people are sometimes put on antidepressants before anyone checks their thyroid.</p>
+<p>I'm not saying thyroid problems are the cause of all depression or anxiety. They're not. But if you're dealing with mood issues and your thyroid has never been properly evaluated, that's a gap worth closing before assuming the answer is a psychiatric medication. Getting the thyroid right can sometimes make a dramatic difference in how someone feels mentally, and that's a much simpler fix than years of adjusting antidepressant doses.</p>
+<h2>What to Actually Test and What the Numbers Mean</h2>
+<p>Here's where I see a lot of people fall through the cracks. A standard thyroid panel at most conventional practices is just a TSH. If you've had symptoms and only ever had that one marker checked, there's a lot more to look at:</p>
+<table class="cost-table">
+<tr>
+<th>Test</th>
+<th>What It Tells You</th>
+</tr>
+<tr>
+<td>TSH</td>
+<td>Brain's signal to the thyroid; the standard first screening test</td>
+</tr>
+<tr>
+<td>Free T4</td>
+<td>Main hormone produced by the thyroid</td>
+</tr>
+<tr>
+<td>Free T3</td>
+<td>Active form of thyroid hormone that cells actually use</td>
+</tr>
+<tr>
+<td>TPO Antibodies</td>
+<td>Primary marker for Hashimoto's autoimmune thyroiditis</td>
+</tr>
+<tr>
+<td>Thyroglobulin Antibodies</td>
+<td>Secondary autoimmune marker; often checked alongside TPO</td>
+</tr>
+<tr>
+<td>Reverse T3</td>
+<td>Can block T3 activity; elevated in chronic stress or illness</td>
+</tr>
+</table>
+<h2>When to Bring It Up</h2>
+<p>If you've been experiencing fatigue, unexplained weight changes, mood issues, brain fog, hair thinning, cold intolerance, or irregular periods and your thyroid has never been comprehensively evaluated, that's a conversation worth having. Same if you've been told your thyroid is "normal" but still feel like something is off. Normal on a basic test and optimal for your body are not always the same thing.</p>
+<div class="post-callout">
+<p>At Staywell, thyroid evaluation is something I take seriously and actually have time to dig into. If you've been dismissed or undertested elsewhere, I'm happy to take a closer look.</p>
+</div>
+<div class="post-author-box">
+<img alt="Daniel Corbin, DNP, APRN, FNP-C" src="../images/provider-photo.jpg"/>
+<div>
+<h4>Daniel Corbin, DNP, APRN, FNP-C</h4>
+<p>Board-certified Family Nurse Practitioner and founder of Staywell Health, a direct primary care practice in Raleigh, NC specializing in whole-person care, LGBTQ+ health, and lifestyle medicine.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section cta-final">
+<div class="container">
+<h2>Think your thyroid might be the issue?</h2>
+<p>Book a free 15-minute virtual meet and greet and let's talk through what's going on.</p>
+<div class="hero-buttons">
+<a class="btn-brass" href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank">Book Free Meet & Greet</a>
+<a class="btn-outline-light" href="../staywell-memberships.html">View Membership Plans</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<img alt="Staywell Health" src="../images/Logo.png" style="height:88px;width:auto;margin-bottom:1rem;"/>
+<p data-i18n="blog.k82" style="max-width:26rem;">Elevated primary and functional care in Raleigh, NC, with real access to your provider and care that goes deeper.</p>
+</div>
+<div>
+<h5>Explore</h5>
+<ul>
+<li><a data-i18n="blog.k83" href="../staywell-about.html">About</a></li>
+<li><a data-i18n="blog.k84" href="../staywell-memberships.html">Memberships</a></li>
+<li><a data-i18n="blog.k85" href="#">FAQ</a></li><li><a data-i18n="blog.k86" href="../staywell-contact.html">Contact</a></li></ul>
+</div>
+<div>
+<h5>Services</h5>
+<ul>
+<li><a data-i18n="blog.k87" href="#">Functional Medicine</a></li>
+<li><a data-i18n="blog.k88" href="../staywell-dpc.html">Direct Primary Care</a></li>
+<li><a data-i18n="blog.k89" href="../staywell-hormone-optimization.html">Hormone Optimization</a></li>
+<li><a data-i18n="blog.k90" href="../staywell-peptide-therapy.html">Peptide Therapy</a></li>
+<li><a data-i18n="blog.k91" href="../staywell-longevity.html">Anti-Aging &amp; Longevity</a></li>
+</ul>
+</div>
+<div>
+<h5>Resources</h5>
+<ul>
+<li><a data-i18n="blog.k92" href="#">Blog</a></li>
+<li><a data-i18n="blog.k93" href="../staywell-healthshare.html">Healthshare Coverage</a></li>
+</ul>
+</div>
+</div>
+<p data-i18n="blog.k94" style="max-width:34rem;margin:0 auto 1.2rem;text-align:center;font-size:0.82rem;color:#a9a695;">Staywell Health is a safe, affirming, and all-inclusive place for everyone, regardless of race, age, sexual orientation, gender identity, and more.</p>
+<div class="footer-bottom" data-i18n="blog.k95">© 2026 Staywell Health, PLLC. All rights reserved.</div>
+</div>
+</footer>
+<script>
+document.querySelectorAll('.hamburger').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var nav = btn.closest('nav');
+    var links = nav.querySelector('.nav-links');
+    links.classList.toggle('active');
+  });
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click', function(){
+    a.closest('.nav-links').classList.remove('active');
+  });
+});
+</script>
+<script src="../i18n.js"></script>
+</body>
+</html>
